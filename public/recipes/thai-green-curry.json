@@ -1,0 +1,136 @@
+{
+  "id": "thai-green-curry",
+  "meta": {
+    "name": "Thai Green Curry",
+    "description": "Fragrant coconut curry with tender chicken, Thai basil, and just the right amount of heat.",
+    "cuisine": "Thai",
+    "servings": 4,
+    "prepTime": 20,
+    "cookTime": 25,
+    "tags": ["curry", "spicy", "comfort"],
+    "icon": "🍛",
+    "coverImage": "",
+    "createdAt": "2025-04-05T14:00:00Z",
+    "updatedAt": "2025-04-05T14:00:00Z"
+  },
+  "stages": [
+    {
+      "id": "stage-prep",
+      "name": "Prep",
+      "cards": [
+        {
+          "id": "tc1",
+          "type": "ingredient",
+          "name": "Chicken Thighs",
+          "quantity": 600,
+          "unit": "g",
+          "notes": "Boneless, sliced into bite-size pieces"
+        },
+        {
+          "id": "tc2",
+          "type": "ingredient",
+          "name": "Green Curry Paste",
+          "quantity": 3,
+          "unit": "tbsp"
+        },
+        {
+          "id": "tc3",
+          "type": "ingredient",
+          "name": "Coconut Milk",
+          "quantity": 400,
+          "unit": "ml",
+          "notes": "Full-fat, one can"
+        },
+        {
+          "id": "tc4",
+          "type": "ingredient",
+          "name": "Thai Eggplant",
+          "quantity": 4,
+          "unit": "whole",
+          "notes": "Quartered"
+        },
+        {
+          "id": "tc5",
+          "type": "ingredient",
+          "name": "Fish Sauce",
+          "quantity": 2,
+          "unit": "tbsp"
+        },
+        {
+          "id": "tc6",
+          "type": "ingredient",
+          "name": "Palm Sugar",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "id": "tc7",
+          "type": "ingredient",
+          "name": "Thai Basil",
+          "quantity": 1,
+          "unit": "bunch",
+          "notes": "Leaves picked"
+        },
+        {
+          "id": "tc8",
+          "type": "cookware",
+          "name": "Wok or deep skillet",
+          "detail": "Large enough for the curry"
+        }
+      ]
+    },
+    {
+      "id": "stage-cook",
+      "name": "Cook",
+      "cards": [
+        {
+          "id": "tc9",
+          "type": "step",
+          "text": "Scoop the thick cream from the top of the coconut milk into a hot wok. Fry for 2 minutes until the oil separates.",
+          "timerMinutes": 2
+        },
+        {
+          "id": "tc10",
+          "type": "step",
+          "text": "Add curry paste and fry until fragrant, about 1 minute.",
+          "timerMinutes": 1
+        },
+        {
+          "id": "tc11",
+          "type": "step",
+          "text": "Add chicken pieces and stir to coat in the paste. Cook until sealed on the outside.",
+          "timerMinutes": 3
+        },
+        {
+          "id": "tc12",
+          "type": "step",
+          "text": "Pour in the remaining coconut milk, add eggplant, fish sauce, and palm sugar. Simmer until chicken is cooked through and eggplant is tender.",
+          "timerMinutes": 15
+        },
+        {
+          "id": "tc13",
+          "type": "note",
+          "text": "Taste and adjust — more fish sauce for salt, more sugar for balance, more paste for heat.",
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "id": "stage-serve",
+      "name": "Serve",
+      "cards": [
+        {
+          "id": "tc14",
+          "type": "step",
+          "text": "Remove from heat, stir in Thai basil leaves, and serve over steamed jasmine rice."
+        },
+        {
+          "id": "tc15",
+          "type": "note",
+          "text": "Garnish with sliced red chili, a drizzle of coconut cream, and a few extra basil leaves.",
+          "color": "yellow"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+/* ===== Design Tokens — Warm Editorial Cookbook ===== */
+:root {
+  /* Palette */
+  --color-parchment:    #F5EDD6;
+  --color-cream:        #FBF6EC;
+  --color-ink:          #2C1810;
+  --color-ink-muted:    #6B4C3B;
+  --color-saffron:      #E8A020;
+  --color-terracotta:   #C1440E;
+  --color-olive:        #5C6B2E;
+  --color-smoke:        #8B7355;
+
+  /* Note card colors */
+  --note-yellow:        #FFF3B0;
+  --note-green:         #D4EDDA;
+  --note-pink:          #FADDE1;
+  --note-blue:          #D0E8F7;
+
+  /* Typography */
+  --font-display:       'Playfair Display', Georgia, serif;
+  --font-body:          'Crimson Pro', 'Times New Roman', serif;
+  --font-mono:          'JetBrains Mono', monospace;
+  --font-ui:            'DM Sans', sans-serif;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* Shadows */
+  --shadow-card:   0 2px 8px rgba(44, 24, 16, 0.12);
+  --shadow-lifted: 0 8px 24px rgba(44, 24, 16, 0.18);
+  --shadow-stage:  inset 0 0 0 1px rgba(44, 24, 16, 0.08);
+
+  /* Radii */
+  --radius-card: 6px;
+  --radius-stage: 10px;
+  --radius-button: 4px;
+
+  /* Transitions */
+  --ease-snap:    cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth:  cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+}
+
+/* ===== Global Reset & Base Styles ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background-color: var(--color-parchment);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Subtle grain overlay on body */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 256px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--color-terracotta);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-smooth);
+}
+
+a:hover {
+  color: var(--color-saffron);
+}
+
+button {
+  font-family: var(--font-ui);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-ink);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-smoke);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ink-muted);
+}
+
+/* Print styles */
+@media print {
+  body::before {
+    display: none;
+  }
+
+  nav, .toolbar, .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+}

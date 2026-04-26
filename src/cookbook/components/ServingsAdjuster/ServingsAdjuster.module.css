@@ -1,0 +1,78 @@
+.adjuster {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.label {
+  font-family: var(--font-ui);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  background: var(--color-cream);
+  border: 1px solid rgba(44, 24, 16, 0.12);
+  border-radius: var(--radius-button);
+  padding: 2px;
+}
+
+.btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-button);
+  color: var(--color-ink-muted);
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.btn:hover:not(:disabled) {
+  background: rgba(44, 24, 16, 0.06);
+  color: var(--color-ink);
+}
+
+.btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.value {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  min-width: 40px;
+  text-align: center;
+  transition: color var(--duration-fast) var(--ease-smooth);
+}
+
+.scaled {
+  color: var(--color-terracotta);
+}
+
+.reset {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--color-smoke);
+  cursor: pointer;
+  border: none;
+  background: none;
+  text-decoration: underline;
+  transition: color var(--duration-fast) var(--ease-smooth);
+}
+
+.reset:hover {
+  color: var(--color-terracotta);
+}

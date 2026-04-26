@@ -1,0 +1,175 @@
+.stage {
+  min-width: 300px;
+  max-width: 340px;
+  flex-shrink: 0;
+  background: rgba(251, 246, 236, 0.7);
+  border: 1px solid rgba(44, 24, 16, 0.08);
+  border-radius: var(--radius-stage);
+  box-shadow: var(--shadow-stage);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow var(--duration-base) var(--ease-smooth);
+}
+
+.stage:hover {
+  box-shadow: var(--shadow-card);
+}
+
+.stageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid rgba(44, 24, 16, 0.06);
+  cursor: grab;
+}
+
+.stageHeader:active {
+  cursor: grabbing;
+}
+
+.stageName {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  background: none;
+  border: none;
+  border-bottom: 1px solid transparent;
+  padding: var(--space-1) 0;
+  outline: none;
+  width: 100%;
+  transition: border-color var(--duration-fast) var(--ease-smooth);
+}
+
+.stageName:focus {
+  border-bottom-color: var(--color-saffron);
+}
+
+.stageActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex-shrink: 0;
+}
+
+.stageActionBtn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-button);
+  color: var(--color-ink-muted);
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.stageActionBtn:hover {
+  background: rgba(44, 24, 16, 0.08);
+  color: var(--color-ink);
+}
+
+.stageActionBtn.danger:hover {
+  background: rgba(193, 68, 14, 0.08);
+  color: var(--color-terracotta);
+}
+
+.cardsList {
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-height: 80px;
+  flex: 1;
+}
+
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+  color: var(--color-smoke);
+  font-family: var(--font-ui);
+  font-size: 0.8125rem;
+  font-style: italic;
+}
+
+/* Add card menu */
+.addCardArea {
+  padding: var(--space-2) var(--space-3) var(--space-3);
+  position: relative;
+}
+
+.addCardBtn {
+  width: 100%;
+  padding: var(--space-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  border: 1px dashed rgba(44, 24, 16, 0.15);
+  border-radius: var(--radius-card);
+  color: var(--color-ink-muted);
+  font-family: var(--font-ui);
+  font-size: 0.8125rem;
+  cursor: pointer;
+  background: transparent;
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.addCardBtn:hover {
+  border-color: var(--color-saffron);
+  color: var(--color-saffron);
+  background: rgba(232, 160, 32, 0.04);
+}
+
+.popover {
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: var(--space-3);
+  right: var(--space-3);
+  background: var(--color-cream);
+  border: 1px solid rgba(44, 24, 16, 0.12);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-lifted);
+  padding: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  z-index: 10;
+}
+
+.popoverItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-button);
+  font-family: var(--font-ui);
+  font-size: 0.8125rem;
+  color: var(--color-ink);
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: background var(--duration-fast) var(--ease-smooth);
+  width: 100%;
+  text-align: left;
+}
+
+.popoverItem:hover {
+  background: rgba(44, 24, 16, 0.06);
+}
+
+.popoverIcon {
+  font-size: 1rem;
+}
+
+.cardCount {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--color-smoke);
+  padding: 0 var(--space-2);
+}

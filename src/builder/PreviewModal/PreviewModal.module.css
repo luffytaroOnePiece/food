@@ -1,0 +1,124 @@
+.previewContent {
+  width: 700px;
+  max-width: 90vw;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: var(--space-7);
+}
+
+.previewHeader {
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.previewIcon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: var(--space-3);
+}
+
+.previewTitle {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--color-ink);
+  margin-bottom: var(--space-2);
+}
+
+.previewDesc {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  color: var(--color-ink-muted);
+  font-style: italic;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.previewMeta {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-5);
+  padding: var(--space-4) 0;
+  border-top: 1px solid rgba(44, 24, 16, 0.08);
+  border-bottom: 1px solid rgba(44, 24, 16, 0.08);
+  margin-bottom: var(--space-6);
+}
+
+.metaItem {
+  text-align: center;
+}
+
+.metaValue {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.metaLabel {
+  font-family: var(--font-ui);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-ink-muted);
+}
+
+.previewStage {
+  margin-bottom: var(--space-6);
+}
+
+.stageName {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-terracotta);
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 2px solid rgba(193, 68, 14, 0.15);
+}
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.previewCard {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-card);
+  background: white;
+  border: 1px solid rgba(44, 24, 16, 0.08);
+}
+
+.previewCard.note {
+  border-left: 3px solid var(--color-saffron);
+}
+
+.cardType {
+  font-family: var(--font-ui);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-smoke);
+  margin-bottom: 4px;
+}
+
+.cardBody {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-ink);
+}
+
+.cardDetail {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--color-ink-muted);
+  margin-top: 2px;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}

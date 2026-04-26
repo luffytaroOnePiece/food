@@ -1,0 +1,80 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-button);
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all var(--duration-fast) var(--ease-smooth);
+  white-space: nowrap;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Variants */
+.primary {
+  background: var(--color-terracotta);
+  color: var(--color-cream);
+  border-color: var(--color-terracotta);
+}
+.primary:hover:not(:disabled) {
+  background: #a83a0b;
+  box-shadow: var(--shadow-card);
+}
+
+.secondary {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  border-color: rgba(44, 24, 16, 0.15);
+}
+.secondary:hover:not(:disabled) {
+  background: var(--color-parchment);
+  border-color: rgba(44, 24, 16, 0.25);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--color-ink-muted);
+}
+.ghost:hover:not(:disabled) {
+  background: rgba(44, 24, 16, 0.06);
+  color: var(--color-ink);
+}
+
+.danger {
+  background: transparent;
+  color: var(--color-terracotta);
+  border-color: rgba(193, 68, 14, 0.2);
+}
+.danger:hover:not(:disabled) {
+  background: rgba(193, 68, 14, 0.08);
+}
+
+/* Sizes */
+.sm {
+  padding: var(--space-1) var(--space-3);
+  font-size: 0.8125rem;
+}
+
+.lg {
+  padding: var(--space-3) var(--space-5);
+  font-size: 1rem;
+}
+
+.icon {
+  padding: var(--space-2);
+}
+
+.icon svg {
+  width: 18px;
+  height: 18px;
+}

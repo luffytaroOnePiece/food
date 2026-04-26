@@ -1,0 +1,47 @@
+{
+  "recipes": [
+    {
+      "id": "classic-french-omelette",
+      "filename": "classic-french-omelette.json",
+      "name": "Classic French Omelette",
+      "cuisine": "French",
+      "tags": [
+        "eggs",
+        "classic",
+        "quick",
+        "technique"
+      ],
+      "icon": "🥚",
+      "prepTime": 2,
+      "cookTime": 3
+    },
+    {
+      "id": "spaghetti-carbonara",
+      "filename": "spaghetti-carbonara.json",
+      "name": "Spaghetti Carbonara",
+      "cuisine": "Italian",
+      "tags": [
+        "pasta",
+        "classic",
+        "quick"
+      ],
+      "icon": "🍝",
+      "prepTime": 15,
+      "cookTime": 20
+    },
+    {
+      "id": "thai-green-curry",
+      "filename": "thai-green-curry.json",
+      "name": "Thai Green Curry",
+      "cuisine": "Thai",
+      "tags": [
+        "curry",
+        "spicy",
+        "comfort"
+      ],
+      "icon": "🍛",
+      "prepTime": 20,
+      "cookTime": 25
+    }
+  ]
+}

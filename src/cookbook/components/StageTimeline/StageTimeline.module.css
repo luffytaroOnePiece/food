@@ -1,0 +1,131 @@
+.timeline {
+  position: relative;
+  padding-left: var(--space-6);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-terracotta),
+    var(--color-saffron),
+    var(--color-olive)
+  );
+  border-radius: 1px;
+}
+
+.stageBlock {
+  position: relative;
+  margin-bottom: var(--space-6);
+}
+
+.stageBlock:last-child {
+  margin-bottom: 0;
+}
+
+.stageHeader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.stageDot {
+  position: absolute;
+  left: calc(-1 * var(--space-6) + 6px);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-terracotta);
+  border: 3px solid var(--color-parchment);
+  box-shadow: 0 0 0 1px var(--color-terracotta);
+  z-index: 1;
+}
+
+.stageName {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.stageCards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.timelineCard {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-card);
+  background: var(--color-cream);
+  border: 1px solid rgba(44, 24, 16, 0.08);
+  transition: box-shadow var(--duration-fast) var(--ease-smooth);
+}
+
+.timelineCard:hover {
+  box-shadow: var(--shadow-card);
+}
+
+.timelineCard.noteCard {
+  border-left: 3px solid var(--color-saffron);
+}
+
+.timelineCard.noteYellow { border-left-color: #c8a000; }
+.timelineCard.noteGreen  { border-left-color: var(--color-olive); }
+.timelineCard.notePink   { border-left-color: #c14464; }
+.timelineCard.noteBlue   { border-left-color: #5078b4; }
+
+.cardTypeLabel {
+  font-family: var(--font-ui);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-smoke);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.cardText {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-ink);
+  line-height: 1.5;
+}
+
+.cardDetail {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--color-ink-muted);
+  margin-top: 4px;
+}
+
+.timerInline {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px var(--space-2);
+  border-radius: 100px;
+  background: rgba(232, 160, 32, 0.12);
+  color: #8a6012;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  margin-left: var(--space-2);
+}
+
+.ingredientQty {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--color-terracotta);
+  font-weight: 500;
+  min-width: 60px;
+  display: inline-block;
+}

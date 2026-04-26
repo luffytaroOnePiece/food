@@ -1,0 +1,39 @@
+.canvas {
+  display: flex;
+  gap: var(--space-5);
+  padding: var(--space-5);
+  overflow-x: auto;
+  min-height: calc(100vh - 200px);
+  align-items: flex-start;
+}
+
+.addStageBtn {
+  min-width: 200px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border: 2px dashed rgba(44, 24, 16, 0.15);
+  border-radius: var(--radius-stage);
+  color: var(--color-ink-muted);
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-smooth);
+  background: transparent;
+  flex-shrink: 0;
+}
+
+.addStageBtn:hover {
+  border-color: var(--color-terracotta);
+  color: var(--color-terracotta);
+  background: rgba(193, 68, 14, 0.04);
+}
+
+.dragOverlay {
+  transform: rotate(3deg);
+  opacity: 0.9;
+  cursor: grabbing;
+}
