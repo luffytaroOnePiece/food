@@ -1,0 +1,197 @@
+{
+  "id": "tamarind-rice",
+  "meta": {
+    "name": "Tamarind Rice",
+    "description": "Pulihora is a classic Andhra comfort dish made with rice, tangy tamarind, and aromatic tempering spices.\nIts bold balance of sour, spicy, and nutty flavors makes it a staple for festivals, temples, and everyday meals.",
+    "cuisine": "Andhra",
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 30,
+    "tags": [
+      "andhra",
+      "rice",
+      "lunch",
+      "festival",
+      "south indian"
+    ],
+    "icon": "🍽️",
+    "createdAt": "2026-04-26T09:58:02.142Z",
+    "updatedAt": "2026-04-26T09:58:02.142Z"
+  },
+  "stages": [
+    {
+      "id": "stage-1777196147110-26215",
+      "name": "Prep",
+      "cards": [
+        {
+          "id": "card-1777196237927-1",
+          "type": "ingredient",
+          "name": "Rice",
+          "quantity": 1,
+          "unit": "cup",
+          "emoji": "🍚",
+          "notes": ""
+        },
+        {
+          "id": "card-1777196286159-2",
+          "type": "ingredient",
+          "name": "Tamarind paste",
+          "quantity": 2,
+          "unit": "tbsp",
+          "emoji": "🥣"
+        },
+        {
+          "id": "card-1777196300810-3",
+          "type": "ingredient",
+          "name": "Green Chilli",
+          "quantity": 3,
+          "unit": "piece",
+          "emoji": "🍽️"
+        },
+        {
+          "id": "card-1777196320409-4",
+          "type": "ingredient",
+          "name": "Dried Red Chilli",
+          "quantity": 2,
+          "unit": "piece",
+          "emoji": "🌶"
+        },
+        {
+          "id": "card-1777196334243-5",
+          "type": "ingredient",
+          "name": "Turmeric Powder",
+          "quantity": 0.5,
+          "unit": "tbsp",
+          "emoji": "✨"
+        },
+        {
+          "id": "card-1777196350710-6",
+          "type": "ingredient",
+          "name": "Salt",
+          "quantity": 2,
+          "unit": "tbsp",
+          "emoji": "🧂",
+          "notes": "Based on your taste"
+        },
+        {
+          "id": "card-1777196378743-7",
+          "type": "ingredient",
+          "name": "Ground Nuts",
+          "quantity": 2,
+          "unit": "tbsp",
+          "emoji": "🥜"
+        },
+        {
+          "id": "card-1777196443509-8",
+          "type": "ingredient",
+          "name": "Cashew",
+          "quantity": 7,
+          "unit": "piece",
+          "emoji": "🍽️"
+        },
+        {
+          "id": "card-1777196482693-9",
+          "type": "ingredient",
+          "name": "Inguva",
+          "quantity": 0.5,
+          "unit": "tbsp",
+          "emoji": "🧂"
+        },
+        {
+          "id": "card-1777196530725-10",
+          "type": "ingredient",
+          "name": "Curry Leaves",
+          "quantity": 7,
+          "unit": "piece",
+          "emoji": "🌿"
+        },
+        {
+          "id": "card-1777196546475-11",
+          "type": "ingredient",
+          "name": "Coriander",
+          "quantity": 5,
+          "unit": "piece",
+          "emoji": "🍃"
+        },
+        {
+          "id": "card-1777196580043-12",
+          "type": "ingredient",
+          "name": "Tempering spices",
+          "quantity": 2,
+          "unit": "tbsp",
+          "emoji": "🍽️",
+          "notes": "Mustard seeds, Split urad dal, Chana Dal"
+        },
+        {
+          "id": "card-1777196714175-13",
+          "type": "ingredient",
+          "name": "Ginger",
+          "quantity": 1,
+          "unit": "slice",
+          "emoji": "🫚",
+          "notes": "fine chop the ginger"
+        }
+      ]
+    },
+    {
+      "id": "stage-1777196844258-fkkz1",
+      "name": "Cooking Process",
+      "cards": [
+        {
+          "id": "card-1777196859541-14",
+          "type": "step",
+          "text": "Soak 100g of tamarind in hot water to extract a thick pulp. Boil this pulp in a pan with turmeric, salt, and a little oil until it thickens into a paste and the oil separates.",
+          "timerMinutes": 15
+        },
+        {
+          "id": "card-1777196913675-15",
+          "type": "note",
+          "text": "Above step is optional if you have tamarind paste",
+          "color": "pink"
+        },
+        {
+          "id": "card-1777196997408-16",
+          "type": "step",
+          "text": "Cook the rice with 1 tbsp of oil & 1/2 tbsp of turmeric in the cooker to ensure the grains stay perfectly separate. Once done, spread it out on a wide plate.",
+          "timerMinutes": 15
+        },
+        {
+          "id": "card-1777197121125-17",
+          "type": "step",
+          "text": "In a separate pan, heat 2–3 tbsp of oil. Fry the 2 tbsp groundnuts and 7 cashews until golden. Add the 2 tbsp tempering spices (mustard, urad dal, chana dal), 2 green chilies,  2 dried red chillies, ginger slices, and 7 curry leaves , salt & turmeric",
+          "timerMinutes": 5
+        },
+        {
+          "id": "card-1777197172025-18",
+          "type": "step",
+          "text": "Lower the heat and add the 2 tbsp tamarind paste",
+          "timerMinutes": 2
+        },
+        {
+          "id": "card-1777197191775-19",
+          "type": "step",
+          "text": "Stir the mixture for 1–2 minutes until the tamarind paste is well-incorporated. Add the 0.5 tbsp Inguva at the very end so its aroma stays strong.",
+          "timerMinutes": 2
+        },
+        {
+          "id": "card-1777197239475-20",
+          "type": "step",
+          "text": "Pour this entire pulihora mix over the cooked rice. Toss in the coriander and mix gently until every grain of rice is yellow and coated.",
+          "timerMinutes": 2
+        }
+      ]
+    },
+    {
+      "id": "stage-1777197447908-i4ptv",
+      "name": "References",
+      "cards": [
+        {
+          "id": "card-1777197456091-21",
+          "type": "video",
+          "url": "https://youtu.be/ri8YcbKjDOc?si=WR-aRRE5RhNaZYH0",
+          "title": "Tamarind Rice"
+        }
+      ]
+    }
+  ]
+}
