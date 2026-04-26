@@ -16,7 +16,7 @@
     ],
     "icon": "🍽️",
     "createdAt": "2026-04-26T07:09:43.140Z",
-    "updatedAt": "2026-04-26T08:50:03.018Z"
+    "updatedAt": "2026-04-26T09:25:48.012Z"
   },
   "stages": [
     {
@@ -142,7 +142,7 @@
           "quantity": 1,
           "unit": "tbsp",
           "emoji": "🍽️",
-          "notes": "spices spluttered in oil/ghee and added to the dish."
+          "notes": "Mustard seeds, Cumin seeds, Split urad dal"
         },
         {
           "id": "card-1777192600903-9",
