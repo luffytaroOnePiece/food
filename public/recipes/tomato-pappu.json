@@ -1,0 +1,216 @@
+{
+  "id": "tomato-pappu",
+  "meta": {
+    "name": "Tomato Pappu",
+    "description": "Tomato pappu is a comforting Pappu delicacy from Andhra Pradesh, where tangy tomatoes blend with soft lentils and fragrant tempering.Made with toor dal, green chilies, garlic, and spices, it brings that perfect balance of heat, sourness, and comfort.",
+    "cuisine": "Andhra",
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 45,
+    "tags": [
+      "lunch",
+      "dal",
+      "indian",
+      "andhra",
+      "pappu"
+    ],
+    "icon": "🍽️",
+    "createdAt": "2026-04-26T07:09:43.140Z",
+    "updatedAt": "2026-04-26T08:50:03.018Z"
+  },
+  "stages": [
+    {
+      "id": "stage-1777187200674-gdk97",
+      "name": "Prep",
+      "cards": [
+        {
+          "id": "card-1777187419424-1",
+          "type": "ingredient",
+          "name": "Onion",
+          "quantity": 1,
+          "unit": "piece",
+          "emoji": "🧅",
+          "notes": "One big onion or Two medium sized onions"
+        },
+        {
+          "id": "card-1777187512806-2",
+          "type": "ingredient",
+          "name": "Tomato",
+          "quantity": 2,
+          "unit": "piece",
+          "emoji": "🍅",
+          "notes": "Two big sized tomatoes or Three small sized tomatoes"
+        },
+        {
+          "id": "card-1777187634456-3",
+          "type": "ingredient",
+          "name": "Garlic",
+          "quantity": 6,
+          "unit": "clove",
+          "emoji": "🧄"
+        },
+        {
+          "id": "card-1777187705439-4",
+          "type": "ingredient",
+          "name": "Green Chilli",
+          "quantity": 4,
+          "unit": "piece",
+          "emoji": "🍽️",
+          "notes": "It depends on the spiciness"
+        },
+        {
+          "id": "card-1777188037804-5",
+          "type": "ingredient",
+          "name": "Salt",
+          "quantity": 2,
+          "unit": "tsp",
+          "emoji": "🧂",
+          "notes": "Based on your taste"
+        },
+        {
+          "id": "card-1777188067855-6",
+          "type": "ingredient",
+          "name": "Chilli Powder",
+          "quantity": 1,
+          "unit": "tbsp",
+          "emoji": "🌶",
+          "notes": "Based on your taste"
+        },
+        {
+          "id": "card-1777191834921-1",
+          "type": "ingredient",
+          "name": "Dried Red Chilli",
+          "quantity": 2,
+          "unit": "piece",
+          "emoji": "🌶"
+        },
+        {
+          "id": "card-1777191966469-2",
+          "type": "ingredient",
+          "name": "Toor Dal",
+          "quantity": 150,
+          "unit": "g",
+          "emoji": "🫘",
+          "notes": "One tea glass "
+        },
+        {
+          "id": "card-1777192030487-3",
+          "type": "ingredient",
+          "name": "Curry Leaves",
+          "quantity": 10,
+          "unit": "bunch",
+          "emoji": "🌿"
+        },
+        {
+          "id": "card-1777192077954-4",
+          "type": "ingredient",
+          "name": "Coriander",
+          "quantity": 10,
+          "unit": "bunch",
+          "emoji": "🍃"
+        },
+        {
+          "id": "card-1777192176771-5",
+          "type": "ingredient",
+          "name": "Oil",
+          "quantity": 2,
+          "unit": "tbsp",
+          "emoji": "🥄",
+          "notes": "Based on cooking style"
+        },
+        {
+          "id": "card-1777192277720-6",
+          "type": "ingredient",
+          "name": "Turmeric Powder",
+          "quantity": 1,
+          "unit": "tbsp",
+          "emoji": "✨"
+        },
+        {
+          "id": "card-1777192343803-7",
+          "type": "ingredient",
+          "name": "Tamarind paste",
+          "quantity": 1,
+          "unit": "tbsp",
+          "emoji": "🥣",
+          "notes": "Based on your taste"
+        },
+        {
+          "id": "card-1777192493520-8",
+          "type": "ingredient",
+          "name": "Tempering spices",
+          "quantity": 1,
+          "unit": "tbsp",
+          "emoji": "🍽️",
+          "notes": "spices spluttered in oil/ghee and added to the dish."
+        },
+        {
+          "id": "card-1777192600903-9",
+          "type": "cookware",
+          "name": "Pressure Cooker",
+          "emoji": "🍽️"
+        },
+        {
+          "id": "card-1777192681220-10",
+          "type": "cookware",
+          "name": "Knife",
+          "emoji": "🔪"
+        }
+      ]
+    },
+    {
+      "id": "stage-1777192728135-5gehc",
+      "name": "Cooking Process",
+      "cards": [
+        {
+          "id": "card-1777192733352-12",
+          "type": "step",
+          "text": "Wash Toor dal and add it to a pressure cooker with chopped 🧅 onions, 🍅 tomatoes,  green chillies, ✨ turmeric, 🧂 salt, chilli powder, 1 tablespoon oil, and enough water. Pressure cook until soft (about 4–5 whistles).\n",
+          "timerMinutes": 20
+        },
+        {
+          "id": "card-1777192920519-1",
+          "type": "note",
+          "text": "Let the pressure release naturally, allow it to cool, and open the cooker after 10 minutes.",
+          "color": "blue"
+        },
+        {
+          "id": "card-1777192991803-2",
+          "type": "step",
+          "text": "Mash the cooked dal mixture well. Add 🧂 salt, 🥣 tamarind paste, and adjust water for your preferred consistency. Let it simmer for 5–10 minutes.",
+          "timerMinutes": 10
+        },
+        {
+          "id": "card-1777193129169-3",
+          "type": "step",
+          "text": "Heat 🥄 oil  or ghee (mix both for authentic taste) , add 🍽️ tempering spices, 🌶 dried red chillies, mashed 🧄 garlic cloves, 🌿 curry leaves, and let them splutter.",
+          "timerMinutes": 4
+        },
+        {
+          "id": "card-1777193231136-4",
+          "type": "step",
+          "text": "Pour this tempering over the dal. Add 🍃 coriander leaves, mix well, and simmer 2 more minutes.",
+          "timerMinutes": 3
+        },
+        {
+          "id": "card-1777193297769-8",
+          "type": "note",
+          "text": "Serve hot with rice and ghee. Classic Andhra comfort food.",
+          "color": "blue"
+        }
+      ]
+    },
+    {
+      "id": "stage-1777193304968-zlisq",
+      "name": "References",
+      "cards": [
+        {
+          "id": "card-1777193309252-9",
+          "type": "video",
+          "url": "https://youtu.be/Gq5zHBngvks?si=RKSiMDWWmJVYWn1L",
+          "title": "Classic Tomato Pappu"
+        }
+      ]
+    }
+  ]
+}

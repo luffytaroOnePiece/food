@@ -1,3 +1,20 @@
 {
-  "recipes": []
+  "recipes": [
+    {
+      "id": "tomato-pappu",
+      "filename": "tomato-pappu.json",
+      "name": "Tomato Pappu",
+      "cuisine": "Andhra",
+      "tags": [
+        "lunch",
+        "dal",
+        "indian",
+        "andhra",
+        "pappu"
+      ],
+      "icon": "🍽️",
+      "prepTime": 10,
+      "cookTime": 45
+    }
+  ]
 }

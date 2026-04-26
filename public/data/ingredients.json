@@ -1,3 +1,60 @@
 {
-  "items": []
+  "items": [
+    {
+      "name": "Chilli Powder",
+      "emoji": "🌶"
+    },
+    {
+      "name": "Coriander",
+      "emoji": "🍃"
+    },
+    {
+      "name": "Curry Leaves",
+      "emoji": "🌿"
+    },
+    {
+      "name": "Dried Red Chilli",
+      "emoji": "🌶"
+    },
+    {
+      "name": "Garlic",
+      "emoji": "🧄"
+    },
+    {
+      "name": "Green Chilli",
+      "emoji": "🍽️"
+    },
+    {
+      "name": "Oil",
+      "emoji": "🥄"
+    },
+    {
+      "name": "Onion",
+      "emoji": "🧅"
+    },
+    {
+      "name": "Salt",
+      "emoji": "🧂"
+    },
+    {
+      "name": "Tamarind paste",
+      "emoji": "🥣"
+    },
+    {
+      "name": "Tempering spices",
+      "emoji": "🍽️"
+    },
+    {
+      "name": "Tomato",
+      "emoji": "🍅"
+    },
+    {
+      "name": "Toor Dal",
+      "emoji": "🫘"
+    },
+    {
+      "name": "Turmeric Powder",
+      "emoji": "✨"
+    }
+  ]
 }
