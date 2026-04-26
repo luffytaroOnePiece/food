@@ -1,6 +1,22 @@
 {
   "recipes": [
     {
+      "id": "tamarind-rice",
+      "filename": "tamarind-rice.json",
+      "name": "Tamarind Rice",
+      "cuisine": "Andhra",
+      "tags": [
+        "andhra",
+        "rice",
+        "lunch",
+        "festival",
+        "south indian"
+      ],
+      "icon": "🍽️",
+      "prepTime": 5,
+      "cookTime": 30
+    },
+    {
       "id": "tomato-pappu",
       "filename": "tomato-pappu.json",
       "name": "Tomato Pappu",
