@@ -1,13 +1,10 @@
 .list {
-  background: var(--color-cream);
-  border: 1px solid rgba(44, 24, 16, 0.08);
-  border-radius: var(--radius-stage);
-  padding: var(--space-5);
+  /* Parent provides the card background */
 }
 
 .title {
   font-family: var(--font-display);
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--color-ink);
   margin-bottom: var(--space-4);
@@ -17,9 +14,9 @@
 
 .items {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-2) var(--space-5);
 }
 
 .item {

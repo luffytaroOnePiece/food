@@ -16,7 +16,7 @@ const isDev = import.meta.env.DEV;
 
 const s = {
   page: {
-    maxWidth: '800px',
+    maxWidth: '1100px',
     margin: '0 auto',
     padding: '32px 24px 64px',
   } as React.CSSProperties,
@@ -89,14 +89,14 @@ const s = {
     borderRadius: 'var(--radius-stage)',
     border: '1px solid rgba(44, 24, 16, 0.06)',
   } as React.CSSProperties,
-  twoCol: {
-    display: 'grid',
-    gridTemplateColumns: '280px 1fr',
-    gap: '32px',
-    alignItems: 'start',
+  ingredientSection: {
+    padding: '24px 28px',
+    background: 'var(--color-cream)',
+    border: '1px solid rgba(44, 24, 16, 0.08)',
+    borderRadius: 'var(--radius-stage)',
+    marginBottom: '40px',
   } as React.CSSProperties,
-  sideCol: {} as React.CSSProperties,
-  mainCol: {} as React.CSSProperties,
+  timelineSection: {} as React.CSSProperties,
 } as const;
 
 export default function RecipeDetailPage() {
@@ -213,14 +213,14 @@ export default function RecipeDetailPage() {
         </div>
       </div>
 
-      {/* Two-column layout */}
-      <div style={s.twoCol}>
-        <div style={s.sideCol}>
-          <IngredientList stages={recipe.stages} scaleIngredient={scaleIngredient} />
-        </div>
-        <div style={s.mainCol}>
-          <StageTimeline stages={recipe.stages} scaleIngredient={scaleIngredient} />
-        </div>
+      {/* Ingredients card */}
+      <div style={s.ingredientSection}>
+        <IngredientList stages={recipe.stages} scaleIngredient={scaleIngredient} />
+      </div>
+
+      {/* Timeline */}
+      <div style={s.timelineSection}>
+        <StageTimeline stages={recipe.stages} scaleIngredient={scaleIngredient} />
       </div>
 
       {/* Print-only view */}

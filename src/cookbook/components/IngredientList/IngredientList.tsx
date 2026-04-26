@@ -1,38 +1,45 @@
-import type { Stage, IngredientCard } from '@app-types/recipe';
+import type { Stage, IngredientCard, CookwareCard } from '@app-types/recipe';
 import styles from './IngredientList.module.css';
 
 interface IngredientListProps {
   stages: Stage[];
-  scaleIngredient: (quantity: number) => string;
+  scaleIngredient?: (quantity: number) => string;
 }
 
-export function IngredientList({ stages, scaleIngredient }: IngredientListProps) {
-  // Collect all ingredients from all stages
+export function IngredientList({ stages }: IngredientListProps) {
   const ingredients = stages.flatMap((stage) =>
     stage.cards
       .filter((c): c is IngredientCard => c.type === 'ingredient')
-      .map((card) => ({ ...card, stageName: stage.name }))
   );
 
-  if (ingredients.length === 0) return null;
+  const cookware = stages.flatMap((stage) =>
+    stage.cards
+      .filter((c): c is CookwareCard => c.type === 'cookware')
+  );
+
+  // Deduplicate by name
+  const uniqueIngredients = [...new Map(ingredients.map(i => [i.name, i])).values()];
+  const uniqueCookware = [...new Map(cookware.map(c => [c.name, c])).values()];
+
+  if (uniqueIngredients.length === 0 && uniqueCookware.length === 0) return null;
 
   return (
     <div className={styles.list}>
-      <h3 className={styles.title}>Ingredients</h3>
-      <ul className={styles.items}>
-        {ingredients.map((ing) => (
-          <li key={ing.id} className={styles.item}>
-            <span className={styles.qty}>
-              {scaleIngredient(ing.quantity)} {ing.unit}
-            </span>
-            <span className={styles.name}>
-              {ing.emoji && <span style={{ marginRight: '4px' }}>{ing.emoji}</span>}
-              {ing.name}
-            </span>
-            {ing.notes && <span className={styles.notes}>{ing.notes}</span>}
-          </li>
+      <h3 className={styles.title}>Materials</h3>
+      <div className={styles.items}>
+        {uniqueIngredients.map((ing) => (
+          <span key={ing.id} className={styles.chip}>
+            <span className={styles.chipEmoji}>{ing.emoji || '🧅'}</span>
+            {ing.name}
+          </span>
         ))}
-      </ul>
+        {uniqueCookware.map((cw) => (
+          <span key={cw.id} className={styles.chip}>
+            <span className={styles.chipEmoji}>{cw.emoji || '🍳'}</span>
+            {cw.name}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }
