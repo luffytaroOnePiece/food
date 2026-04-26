@@ -25,7 +25,10 @@ export function IngredientList({ stages, scaleIngredient }: IngredientListProps)
             <span className={styles.qty}>
               {scaleIngredient(ing.quantity)} {ing.unit}
             </span>
-            <span className={styles.name}>{ing.name}</span>
+            <span className={styles.name}>
+              {ing.emoji && <span style={{ marginRight: '4px' }}>{ing.emoji}</span>}
+              {ing.name}
+            </span>
             {ing.notes && <span className={styles.notes}>{ing.notes}</span>}
           </li>
         ))}

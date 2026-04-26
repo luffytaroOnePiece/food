@@ -1,4 +1,4 @@
-import type { CardType, IngredientCard, CookwareCard, StepCard, NoteCard, AnyCard } from '@app-types/recipe';
+import type { CardType, IngredientCard, CookwareCard, StepCard, NoteCard, VideoCard, AnyCard } from '@app-types/recipe';
 
 let cardCounter = 0;
 
@@ -41,6 +41,14 @@ export function createDefaultCard(type: CardType): AnyCard {
         text: '',
         color: 'yellow',
       } satisfies NoteCard;
+
+    case 'video':
+      return {
+        id,
+        type: 'video',
+        url: '',
+        title: '',
+      } satisfies VideoCard;
   }
 }
 
@@ -49,6 +57,7 @@ export const CARD_TYPE_LABELS: Record<CardType, string> = {
   cookware: 'Cookware',
   step: 'Step',
   note: 'Note',
+  video: 'Video',
 };
 
 export const CARD_TYPE_ICONS: Record<CardType, string> = {
@@ -56,6 +65,7 @@ export const CARD_TYPE_ICONS: Record<CardType, string> = {
   cookware: '🍳',
   step: '📋',
   note: '📝',
+  video: '🎬',
 };
 
 export const UNIT_OPTIONS = [

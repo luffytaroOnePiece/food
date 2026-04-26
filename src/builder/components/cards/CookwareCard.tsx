@@ -1,4 +1,5 @@
 import { useBuilderStore } from '@store/builderStore';
+import { ItemCombobox } from '@shared/ui/ItemCombobox/ItemCombobox';
 import type { CookwareCard as CookwareCardType } from '@app-types/recipe';
 import styles from './cards.module.css';
 
@@ -9,7 +10,7 @@ interface ViewProps {
 export function CookwareCardView({ card }: ViewProps) {
   return (
     <>
-      <span className={styles.cardIcon}>🍳</span>
+      <span className={styles.cardIcon}>{card.emoji || '🍳'}</span>
       <div className={styles.cardInfo}>
         <div className={styles.cardTitle}>
           {card.name || 'Untitled cookware'}
@@ -34,11 +35,12 @@ export function CookwareCardEdit({ card, stageId }: EditProps) {
     <div className={styles.editForm}>
       <div className={styles.editField}>
         <label className={styles.editLabel}>Name</label>
-        <input
-          className={styles.editInput}
+        <ItemCombobox
+          catalogType="cookware"
           value={card.name}
-          onChange={(e) => updateCard(stageId, card.id, { name: e.target.value })}
-          placeholder="e.g. Cast iron skillet"
+          emoji={card.emoji}
+          onChange={(name, emoji) => updateCard(stageId, card.id, { name, emoji })}
+          placeholder="Search cookware…"
           autoFocus
         />
       </div>

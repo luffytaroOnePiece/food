@@ -7,6 +7,7 @@ import { IngredientCardView, IngredientCardEdit } from './IngredientCard';
 import { CookwareCardView, CookwareCardEdit } from './CookwareCard';
 import { StepCardView, StepCardEdit } from './StepCard';
 import { NoteCardView, NoteCardEdit } from './NoteCard';
+import { VideoCardView, VideoCardEdit } from './VideoCard';
 import type { AnyCard } from '@app-types/recipe';
 import styles from './cards.module.css';
 
@@ -93,6 +94,8 @@ export function CardShell({
         return <StepCardView card={card} />;
       case 'note':
         return <NoteCardView card={card} />;
+      case 'video':
+        return <VideoCardView card={card} />;
     }
   };
 
@@ -106,6 +109,8 @@ export function CardShell({
         return <StepCardEdit card={card} stageId={stageId} />;
       case 'note':
         return <NoteCardEdit card={card} stageId={stageId} />;
+      case 'video':
+        return <VideoCardEdit card={card} stageId={stageId} />;
     }
   };
 

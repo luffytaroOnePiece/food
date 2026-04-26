@@ -2,6 +2,7 @@ import { useBuilderStore } from '@store/builderStore';
 import { Modal } from '@shared/ui/Modal/Modal';
 import { Badge } from '@shared/ui/Badge/Badge';
 import { CARD_TYPE_LABELS } from '@/constants/cards';
+import { getYouTubeEmbedUrl } from '@utils/youtube';
 import styles from './PreviewModal.module.css';
 
 interface PreviewModalProps {
@@ -91,6 +92,26 @@ export function PreviewModal({ open, onClose }: PreviewModalProps) {
                       </>
                     )}
                     {card.type === 'note' && card.text}
+                    {card.type === 'video' && (() => {
+                      const embedUrl = getYouTubeEmbedUrl(card.url);
+                      return embedUrl ? (
+                        <div style={{ marginTop: '8px' }}>
+                          {card.title && <div style={{ marginBottom: '6px', fontWeight: 600 }}>{card.title}</div>}
+                          <iframe
+                            width="100%"
+                            height="315"
+                            src={embedUrl}
+                            title={card.title || 'YouTube video'}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            style={{ borderRadius: '6px' }}
+                          />
+                        </div>
+                      ) : (
+                        <span style={{ color: 'var(--color-smoke)' }}>No video URL set</span>
+                      );
+                    })()}
                   </div>
                 </div>
               ))}

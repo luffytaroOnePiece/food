@@ -1,5 +1,6 @@
 import { Timer } from 'lucide-react';
 import { CARD_TYPE_LABELS, CARD_TYPE_ICONS } from '@/constants/cards';
+import { getYouTubeEmbedUrl } from '@utils/youtube';
 import type { Stage } from '@app-types/recipe';
 import styles from './StageTimeline.module.css';
 
@@ -34,7 +35,11 @@ export function StageTimeline({ stages, scaleIngredient }: StageTimelineProps) {
                   className={`${styles.timelineCard} ${isNote ? styles.noteCard : ''} ${noteColorClass}`}
                 >
                   <div className={styles.cardTypeLabel}>
-                    <span>{CARD_TYPE_ICONS[card.type]}</span>
+                    <span>
+                      {(card.type === 'ingredient' || card.type === 'cookware') && card.emoji
+                        ? card.emoji
+                        : CARD_TYPE_ICONS[card.type]}
+                    </span>
                     {CARD_TYPE_LABELS[card.type]}
                   </div>
 
@@ -74,6 +79,32 @@ export function StageTimeline({ stages, scaleIngredient }: StageTimelineProps) {
                   {card.type === 'note' && (
                     <div className={styles.cardText}>{card.text}</div>
                   )}
+
+                  {card.type === 'video' && (() => {
+                    const embedUrl = getYouTubeEmbedUrl(card.url);
+                    return embedUrl ? (
+                      <div className={styles.videoEmbed}>
+                        {card.title && (
+                          <div className={styles.cardText} style={{ marginBottom: '8px', fontWeight: 600 }}>
+                            {card.title}
+                          </div>
+                        )}
+                        <div className={styles.videoWrapper}>
+                          <iframe
+                            src={embedUrl}
+                            title={card.title || 'YouTube video'}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          />
+                        </div>
+                      </div>
+                    ) : (
+                      <div className={styles.cardText} style={{ color: 'var(--color-smoke)', fontStyle: 'italic' }}>
+                        Video link not set
+                      </div>
+                    );
+                  })()}
                 </div>
               );
             })}

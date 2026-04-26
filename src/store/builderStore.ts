@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import type { RecipeMeta, Stage, CardType, AnyCard } from '@app-types/recipe';
+import type { RecipeMeta, Stage, CardType, AnyCard, Recipe } from '@app-types/recipe';
 import { createDefaultCard } from '@/constants/cards';
 import { serializeRecipe, downloadRecipeJson } from '@utils/exportJson';
 
@@ -46,7 +46,13 @@ interface BuilderStore {
   saveDraft: () => void;
   clearCanvas: () => void;
 
-  // Export
+  // Load existing recipe for editing
+  loadRecipe: (recipe: Recipe) => void;
+
+  // Save to server (writes to public/recipes/)
+  saveToServer: () => Promise<{ ok: boolean; error?: string }>;
+
+  // Export (download file)
   exportJSON: () => void;
 }
 
@@ -157,6 +163,46 @@ export const useBuilderStore = create<BuilderStore>((set, get) => ({
       meta: { ...defaultMeta },
       stages: [{ id: createStageId(), name: 'Prep', cards: [] }],
     }),
+
+  loadRecipe: (recipe: Recipe) => {
+    set({
+      meta: { ...recipe.meta },
+      stages: recipe.stages.map((s) => ({ ...s, cards: [...s.cards] })),
+    });
+    // Also persist to localStorage
+    try {
+      localStorage.setItem(DRAFT_KEY, JSON.stringify({
+        meta: recipe.meta,
+        stages: recipe.stages,
+      }));
+    } catch {
+      // Ignore
+    }
+  },
+
+  saveToServer: async () => {
+    const { meta, stages } = get();
+    if (!meta.name.trim()) {
+      return { ok: false, error: 'Recipe needs a name before saving.' };
+    }
+    const recipe = serializeRecipe(meta, stages);
+    try {
+      const res = await fetch('/__save-recipe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(recipe),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        return { ok: false, error: data.error || 'Server error' };
+      }
+      // Also persist to localStorage
+      localStorage.setItem(DRAFT_KEY, JSON.stringify({ meta, stages }));
+      return { ok: true };
+    } catch (err) {
+      return { ok: false, error: 'Could not connect to dev server.' };
+    }
+  },
 
   exportJSON: () => {
     const { meta, stages } = get();

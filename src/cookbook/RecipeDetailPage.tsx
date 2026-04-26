@@ -1,6 +1,6 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Clock, ChefHat, Printer } from 'lucide-react';
+import { ArrowLeft, Clock, ChefHat, Printer, Pencil, Trash2 } from 'lucide-react';
 import { useRecipe } from '@hooks/useRecipes';
 import { useServingsScale } from '@hooks/useServingsScale';
 import { StageTimeline } from './components/StageTimeline/StageTimeline';
@@ -10,6 +10,9 @@ import { PrintView } from './components/PrintView/PrintView';
 import { Badge } from '@shared/ui/Badge/Badge';
 import { Button } from '@shared/ui/Button/Button';
 import { Spinner } from '@shared/ui/Spinner/Spinner';
+import { useBuilderStore } from '@store/builderStore';
+
+const isDev = import.meta.env.DEV;
 
 const s = {
   page: {
@@ -102,6 +105,33 @@ export default function RecipeDetailPage() {
   const { servings, setServings, scaleIngredient } = useServingsScale(
     recipe?.meta.servings ?? 4
   );
+  const loadRecipe = useBuilderStore((s) => s.loadRecipe);
+  const navigate = useNavigate();
+
+  const handleEdit = () => {
+    if (!recipe) return;
+    loadRecipe(recipe);
+    navigate('/builder');
+  };
+
+  const handleDelete = async () => {
+    if (!recipe) return;
+    const confirmed = window.confirm(
+      `Delete "${recipe.meta.name}"? This will remove the recipe file permanently.`
+    );
+    if (!confirmed) return;
+
+    try {
+      const res = await fetch(`/__delete-recipe/${recipe.id}`, { method: 'DELETE' });
+      if (res.ok) {
+        navigate('/');
+      } else {
+        alert('Failed to delete recipe.');
+      }
+    } catch {
+      alert('Could not connect to dev server.');
+    }
+  };
 
   if (isLoading) return <Spinner />;
   if (isError || !recipe) {
@@ -163,10 +193,24 @@ export default function RecipeDetailPage() {
           baseServings={recipe.meta.servings}
           onChange={setServings}
         />
-        <Button variant="ghost" size="sm" onClick={() => window.print()}>
-          <Printer size={14} />
-          Print
-        </Button>
+        <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+          {isDev && (
+            <Button variant="primary" size="sm" onClick={handleEdit}>
+              <Pencil size={14} />
+              Edit in Builder
+            </Button>
+          )}
+          {isDev && (
+            <Button variant="danger" size="sm" onClick={handleDelete}>
+              <Trash2 size={14} />
+              Delete
+            </Button>
+          )}
+          <Button variant="ghost" size="sm" onClick={() => window.print()}>
+            <Printer size={14} />
+            Print
+          </Button>
+        </div>
       </div>
 
       {/* Two-column layout */}

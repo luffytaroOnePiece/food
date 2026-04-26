@@ -1,4 +1,4 @@
-export type CardType = 'ingredient' | 'cookware' | 'step' | 'note';
+export type CardType = 'ingredient' | 'cookware' | 'step' | 'note' | 'video';
 
 export interface BaseCard {
   id: string;
@@ -12,12 +12,14 @@ export interface IngredientCard extends BaseCard {
   quantity: number;
   unit: string;
   notes?: string;
+  emoji?: string;
 }
 
 export interface CookwareCard extends BaseCard {
   type: 'cookware';
   name: string;
   detail?: string;
+  emoji?: string;
 }
 
 export interface StepCard extends BaseCard {
@@ -32,7 +34,13 @@ export interface NoteCard extends BaseCard {
   color?: 'yellow' | 'green' | 'pink' | 'blue';
 }
 
-export type AnyCard = IngredientCard | CookwareCard | StepCard | NoteCard;
+export interface VideoCard extends BaseCard {
+  type: 'video';
+  url: string;
+  title?: string;
+}
+
+export type AnyCard = IngredientCard | CookwareCard | StepCard | NoteCard | VideoCard;
 
 export interface Stage {
   id: string;

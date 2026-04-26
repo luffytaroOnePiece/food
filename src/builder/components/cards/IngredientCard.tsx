@@ -1,5 +1,6 @@
 import { useBuilderStore } from '@store/builderStore';
 import { UNIT_OPTIONS } from '@/constants/cards';
+import { ItemCombobox } from '@shared/ui/ItemCombobox/ItemCombobox';
 import type { IngredientCard as IngredientCardType } from '@app-types/recipe';
 import styles from './cards.module.css';
 
@@ -10,7 +11,7 @@ interface ViewProps {
 export function IngredientCardView({ card }: ViewProps) {
   return (
     <>
-      <span className={styles.cardIcon}>🧅</span>
+      <span className={styles.cardIcon}>{card.emoji || '🧅'}</span>
       <div className={styles.cardInfo}>
         <div className={styles.cardTitle}>
           {card.name || 'Untitled ingredient'}
@@ -36,11 +37,12 @@ export function IngredientCardEdit({ card, stageId }: EditProps) {
     <div className={styles.editForm}>
       <div className={styles.editField}>
         <label className={styles.editLabel}>Name</label>
-        <input
-          className={styles.editInput}
+        <ItemCombobox
+          catalogType="ingredient"
           value={card.name}
-          onChange={(e) => updateCard(stageId, card.id, { name: e.target.value })}
-          placeholder="e.g. Garlic"
+          emoji={card.emoji}
+          onChange={(name, emoji) => updateCard(stageId, card.id, { name, emoji })}
+          placeholder="Search ingredients…"
           autoFocus
         />
       </div>

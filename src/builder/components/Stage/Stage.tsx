@@ -14,7 +14,7 @@ interface StageProps {
   stage: StageType;
 }
 
-const CARD_TYPES: CardType[] = ['ingredient', 'cookware', 'step', 'note'];
+const CARD_TYPES: CardType[] = ['ingredient', 'cookware', 'step', 'note', 'video'];
 
 export function Stage({ stage }: StageProps) {
   const renameStage = useBuilderStore((s) => s.renameStage);
