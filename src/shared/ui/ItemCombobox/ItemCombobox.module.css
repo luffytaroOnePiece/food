@@ -40,7 +40,7 @@
   top: 100%;
   left: 0;
   right: 0;
-  z-index: 20;
+  z-index: 100;
   background: white;
   border: 1px solid rgba(44, 24, 16, 0.12);
   border-radius: var(--radius-button);

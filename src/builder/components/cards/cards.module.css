@@ -5,7 +5,6 @@
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
   display: flex;
-  overflow: hidden;
   transition: box-shadow var(--duration-fast) var(--ease-smooth),
               border-color var(--duration-fast) var(--ease-smooth);
 }
@@ -17,6 +16,8 @@
 .cardShell.editing {
   border-color: var(--color-saffron);
   box-shadow: 0 0 0 2px rgba(232, 160, 32, 0.2);
+  overflow: visible;
+  z-index: 5;
 }
 
 .cardShell.overlay {
