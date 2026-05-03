@@ -1,6 +1,6 @@
-import { useState, useCallback, useEffect, useRef } from 'react';
+import { useState, useCallback, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Shuffle, Camera, Maximize2, X } from 'lucide-react';
+import { Shuffle, Camera, Maximize2, X, Search } from 'lucide-react';
 import styles from './GalleryPage.module.css';
 
 const IMAGE_START = 1;
@@ -8,10 +8,25 @@ const IMAGE_END = 4;
 const BASE_URL =
   'https://raw.githubusercontent.com/luffytaroOnePiece/foodgallery/main';
 
-function generateImages() {
-  const imgs = [];
+type Metadata = Record<string, string>;
+
+interface GalleryImage {
+  id: number;
+  src: string;
+  alt: string;
+  caption: string;
+}
+
+function buildImages(meta: Metadata): GalleryImage[] {
+  const imgs: GalleryImage[] = [];
   for (let i = IMAGE_START; i <= IMAGE_END; i++) {
-    imgs.push({ id: i, src: `${BASE_URL}/${i}.jpg`, alt: `Food photo ${i}` });
+    const caption = meta[String(i)] ?? `Dish #${i}`;
+    imgs.push({
+      id: i,
+      src: `${BASE_URL}/${i}.jpg`,
+      alt: caption,
+      caption,
+    });
   }
   return imgs;
 }
@@ -26,20 +41,41 @@ function shuffleArray<T>(arr: T[]): T[] {
 }
 
 export default function GalleryPage() {
-  const [images, setImages] = useState(() => shuffleArray(generateImages()));
+  const [metadata, setMetadata] = useState<Metadata>({});
+  const [images, setImages] = useState<GalleryImage[]>([]);
+  const [search, setSearch] = useState('');
   const [lightbox, setLightbox] = useState<number | null>(null);
   const [isShuffling, setIsShuffling] = useState(false);
   const shuffleKeyRef = useRef(0);
+  const metaLoaded = useRef(false);
+
+  // Load metadata once
+  useEffect(() => {
+    if (metaLoaded.current) return;
+    metaLoaded.current = true;
+
+    fetch(`${import.meta.env.BASE_URL}foodmetadata.json`)
+      .then((r) => r.json())
+      .then((data: Metadata) => {
+        setMetadata(data);
+        setImages(shuffleArray(buildImages(data)));
+      })
+      .catch(() => {
+        // Fallback: no captions
+        const fallback: Metadata = {};
+        setMetadata(fallback);
+        setImages(shuffleArray(buildImages(fallback)));
+      });
+  }, []);
 
   const handleShuffle = useCallback(() => {
     setIsShuffling(true);
-    // Brief delay so the exit animation plays
     setTimeout(() => {
       shuffleKeyRef.current += 1;
-      setImages(shuffleArray(generateImages()));
+      setImages(shuffleArray(buildImages(metadata)));
       setIsShuffling(false);
     }, 350);
-  }, []);
+  }, [metadata]);
 
   // Close lightbox on Escape
   useEffect(() => {
@@ -49,6 +85,16 @@ export default function GalleryPage() {
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
   }, []);
+
+  // Filter images by search query
+  const filtered = useMemo(() => {
+    if (!search.trim()) return images;
+    const q = search.toLowerCase();
+    return images.filter((img) => img.caption.toLowerCase().includes(q));
+  }, [images, search]);
+
+  // Find the lightbox image caption
+  const lightboxImage = images.find((img) => img.id === lightbox);
 
   return (
     <div className={styles.page}>
@@ -61,12 +107,24 @@ export default function GalleryPage() {
         </p>
       </div>
 
-      {/* Shuffle control */}
+      {/* Search & Shuffle controls */}
       <div className={styles.controls}>
+        <div className={styles.searchWrap}>
+          <Search size={16} className={styles.searchIcon} />
+          <input
+            type="text"
+            className={styles.searchInput}
+            placeholder="Search dishes…"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            id="gallery-search"
+          />
+        </div>
+
         <button
           className={styles.shuffleBtn}
           onClick={handleShuffle}
-          disabled={isShuffling}
+          disabled={isShuffling || images.length === 0}
           id="gallery-shuffle-btn"
         >
           <Shuffle size={16} className={isShuffling ? styles.spinning : ''} />
@@ -74,7 +132,7 @@ export default function GalleryPage() {
         </button>
         <span className={styles.photoCount}>
           <Camera size={14} />
-          {images.length} photos
+          {filtered.length} of {images.length} photos
         </span>
       </div>
 
@@ -82,7 +140,7 @@ export default function GalleryPage() {
       <div className={styles.grid}>
         <AnimatePresence mode="popLayout">
           {!isShuffling &&
-            images.map((img, i) => (
+            filtered.map((img, i) => (
               <motion.div
                 key={`${shuffleKeyRef.current}-${img.id}`}
                 className={styles.card}
@@ -110,6 +168,7 @@ export default function GalleryPage() {
                   </div>
                 </div>
                 <div className={styles.cardLabel}>
+                  <span className={styles.cardCaption}>{img.caption}</span>
                   <span className={styles.cardNumber}>#{img.id}</span>
                 </div>
               </motion.div>
@@ -128,16 +187,25 @@ export default function GalleryPage() {
             transition={{ duration: 0.25 }}
             onClick={() => setLightbox(null)}
           >
-            <motion.img
-              src={`${BASE_URL}/${lightbox}.jpg`}
-              alt={`Food photo ${lightbox}`}
-              className={styles.lightboxImage}
+            <motion.div
+              className={styles.lightboxContent}
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ duration: 0.3, ease: [0.34, 1.56, 0.64, 1] }}
               onClick={(e) => e.stopPropagation()}
-            />
+            >
+              <img
+                src={`${BASE_URL}/${lightbox}.jpg`}
+                alt={lightboxImage?.caption ?? `Food photo ${lightbox}`}
+                className={styles.lightboxImage}
+              />
+              {lightboxImage?.caption && (
+                <div className={styles.lightboxCaption}>
+                  {lightboxImage.caption}
+                </div>
+              )}
+            </motion.div>
             <button
               className={styles.lightboxClose}
               onClick={() => setLightbox(null)}

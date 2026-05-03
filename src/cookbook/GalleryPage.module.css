@@ -35,13 +35,55 @@
   margin: 0 auto;
 }
 
+/* Search */
+.searchWrap {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  max-width: 360px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-smoke);
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px 14px 10px 40px;
+  border: 1px solid rgba(44, 24, 16, 0.12);
+  border-radius: 100px;
+  background: var(--color-cream);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: var(--color-ink);
+  outline: none;
+  transition: border-color var(--duration-fast) var(--ease-smooth),
+              box-shadow var(--duration-fast) var(--ease-smooth);
+}
+
+.searchInput::placeholder {
+  color: var(--color-smoke);
+  font-style: italic;
+}
+
+.searchInput:focus {
+  border-color: var(--color-saffron);
+  box-shadow: 0 0 0 3px rgba(232, 160, 32, 0.15);
+}
+
 /* Controls */
 .controls {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 16px;
   margin-bottom: 28px;
-  padding: 0 4px;
+  flex-wrap: wrap;
 }
 
 .shuffleBtn {
@@ -192,10 +234,22 @@
 
 /* Card label */
 .cardLabel {
-  padding: 10px 14px;
+  padding: 12px 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
+}
+
+.cardCaption {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 
 .cardNumber {
@@ -219,12 +273,36 @@
   padding: 40px;
 }
 
-.lightboxImage {
+.lightboxContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 90vw;
-  max-height: 85vh;
-  border-radius: 12px;
+  max-height: 90vh;
+}
+
+.lightboxImage {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 12px 12px 0 0;
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
   object-fit: contain;
+  display: block;
+}
+
+.lightboxCaption {
+  width: 100%;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 0 0 12px 12px;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.01em;
 }
 
 .lightboxClose {
