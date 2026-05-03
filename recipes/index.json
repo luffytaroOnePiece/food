@@ -1,6 +1,21 @@
 {
   "recipes": [
     {
+      "id": "lemon-chicken-pepper-soup",
+      "filename": "lemon-chicken-pepper-soup.json",
+      "name": "Lemon Chicken Pepper Soup",
+      "cuisine": "Indo-Chinese",
+      "tags": [
+        "chicken",
+        "soup",
+        "warm",
+        "starter"
+      ],
+      "icon": "🍲",
+      "prepTime": 10,
+      "cookTime": 30
+    },
+    {
       "id": "tamarind-rice",
       "filename": "tamarind-rice.json",
       "name": "Tamarind Rice",

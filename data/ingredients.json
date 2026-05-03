@@ -1,8 +1,20 @@
 {
   "items": [
     {
+      "name": "Bell Pepper",
+      "emoji": "🫑"
+    },
+    {
+      "name": "Carrot",
+      "emoji": "🥕"
+    },
+    {
       "name": "Cashew",
       "emoji": "🍽️"
+    },
+    {
+      "name": "Chicken",
+      "emoji": "🐔"
     },
     {
       "name": "Chilli Powder",
@@ -39,6 +51,10 @@
     {
       "name": "Inguva",
       "emoji": "🧂"
+    },
+    {
+      "name": "Lemon",
+      "emoji": "🍋"
     },
     {
       "name": "Oil",
