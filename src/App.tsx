@@ -6,6 +6,7 @@ import { Spinner } from '@shared/ui/Spinner/Spinner';
 const CookbookPage = lazy(() => import('@cookbook/CookbookPage'));
 const RecipeDetailPage = lazy(() => import('@cookbook/RecipeDetailPage'));
 const BuilderPage = lazy(() => import('@builder/BuilderPage'));
+const GalleryPage = lazy(() => import('@cookbook/GalleryPage'));
 
 const isDev = import.meta.env.DEV;
 
@@ -24,6 +25,7 @@ const router = createHashRouter([
     element: <Layout />,
     children: [
       { path: '/', element: <CookbookPage /> },
+      { path: '/gallery', element: <GalleryPage /> },
       { path: '/recipe/:id', element: <RecipeDetailPage /> },
       ...(isDev
         ? [{ path: '/builder', element: <BuilderPage /> }]

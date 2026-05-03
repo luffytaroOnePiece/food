@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { BookOpen, Hammer } from 'lucide-react';
+import { BookOpen, Hammer, ImageIcon } from 'lucide-react';
 import styles from './AppShell.module.css';
 
 const isDev = import.meta.env.DEV;
@@ -28,6 +28,14 @@ export function AppShell({ children }: AppShellProps) {
           >
             <BookOpen size={16} />
             Cookbook
+          </Link>
+
+          <Link
+            to="/gallery"
+            className={`${styles.navLink} ${path === '/gallery' ? styles.active : ''}`}
+          >
+            <ImageIcon size={16} />
+            Gallery
           </Link>
 
           {isDev && (

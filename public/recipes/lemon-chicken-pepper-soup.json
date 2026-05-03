@@ -1,0 +1,79 @@
+{
+  "id": "lemon-chicken-pepper-soup",
+  "meta": {
+    "name": "Lemon Chicken Pepper Soup",
+    "description": "Warm, comforting Lemon Chicken Pepper Soup combines tender chicken, bold black pepper heat, garlic-ginger aromatics, and bright lemon for a light yet flavorful broth. It’s soothing, mildly spicy, and refreshing at the same time. perfect as a starter, comfort food, or when you want something nourishing.",
+    "cuisine": "Indo-Chinese",
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 30,
+    "tags": [
+      "chicken",
+      "soup",
+      "warm",
+      "starter"
+    ],
+    "icon": "🍲",
+    "createdAt": "2026-04-27T03:25:39.874Z",
+    "updatedAt": "2026-04-27T03:25:39.874Z"
+  },
+  "stages": [
+    {
+      "id": "stage-1777259750490-ojips",
+      "name": "Prep",
+      "cards": [
+        {
+          "id": "card-1777260078006-1",
+          "type": "ingredient",
+          "name": "Ginger",
+          "quantity": 2,
+          "unit": "slice",
+          "emoji": "🫚",
+          "notes": "Two Slices of ginger"
+        },
+        {
+          "id": "card-1777260110172-2",
+          "type": "ingredient",
+          "name": "Garlic",
+          "quantity": 10,
+          "unit": "piece",
+          "emoji": "🧄"
+        },
+        {
+          "id": "card-1777260125788-3",
+          "type": "ingredient",
+          "name": "Chicken",
+          "quantity": 200,
+          "unit": "g",
+          "emoji": "🐔",
+          "notes": "Boneless chicken"
+        },
+        {
+          "id": "card-1777260186889-4",
+          "type": "ingredient",
+          "name": "Lemon",
+          "quantity": 1,
+          "unit": "piece",
+          "emoji": "🍋"
+        },
+        {
+          "id": "card-1777260220705-5",
+          "type": "ingredient",
+          "name": "Bell Pepper",
+          "quantity": 50,
+          "unit": "g",
+          "emoji": "🫑"
+        },
+        {
+          "id": "card-1777260312839-6",
+          "type": "ingredient",
+          "name": "Onion",
+          "quantity": 1,
+          "unit": "piece",
+          "emoji": "🧅",
+          "notes": "Finely chopped onions"
+        }
+      ]
+    }
+  ]
+}
