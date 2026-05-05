@@ -3,8 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Shuffle, Camera, Maximize2, X, Search } from "lucide-react";
 import styles from "./GalleryPage.module.css";
 
-const IMAGE_START = 1;
-const IMAGE_END = 6;
 const BASE_URL =
   "https://raw.githubusercontent.com/luffytaroOnePiece/foodgallery/main";
 
@@ -18,17 +16,18 @@ interface GalleryImage {
 }
 
 function buildImages(meta: Metadata): GalleryImage[] {
-  const imgs: GalleryImage[] = [];
-  for (let i = IMAGE_START; i <= IMAGE_END; i++) {
-    const caption = meta[String(i)] ?? `Dish #${i}`;
-    imgs.push({
-      id: i,
-      src: `${BASE_URL}/${i}.jpg`,
-      alt: caption,
-      caption,
-    });
-  }
-  return imgs;
+  // Derive image list from metadata keys — no hardcoded range needed
+  const ids = Object.keys(meta)
+    .map(Number)
+    .filter((n) => !isNaN(n))
+    .sort((a, b) => a - b);
+
+  return ids.map((id) => ({
+    id,
+    src: `${BASE_URL}/${id}.jpg`,
+    alt: meta[String(id)],
+    caption: meta[String(id)],
+  }));
 }
 
 function shuffleArray<T>(arr: T[]): T[] {
