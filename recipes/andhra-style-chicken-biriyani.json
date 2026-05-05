@@ -1,0 +1,273 @@
+{
+  "id": "andhra-style-chicken-biriyani",
+  "meta": {
+    "name": "Andhra Style Chicken Biriyani",
+    "description": "Andhra-style chicken pulao is a flavorful one-pot rice dish made with tender chicken, fragrant basmati rice, and a bold mix of spices. What sets it apart is the generous use of mint and coriander, giving it a fresh, slightly spicy kick without being as heavy as biryani. Perfect for a quick, satisfying meal with rich South Indian flavors.",
+    "cuisine": "Andhra",
+    "servings": 1,
+    "prepTime": 20,
+    "cookTime": 60,
+    "tags": [
+      "biriyani",
+      "spicy",
+      "andhra",
+      "chicken",
+      "rice",
+      "non veg"
+    ],
+    "icon": "🍽️",
+    "createdAt": "2026-05-05T02:32:41.057Z",
+    "updatedAt": "2026-05-05T02:35:34.828Z"
+  },
+  "stages": [
+    {
+      "id": "stage-1777810338208-qvzsz",
+      "name": "Prep",
+      "cards": [
+        {
+          "id": "card-1777810498834-1",
+          "type": "ingredient",
+          "name": "Onion",
+          "quantity": 1,
+          "unit": "piece",
+          "emoji": "🧅",
+          "notes": ""
+        },
+        {
+          "id": "card-1777810509436-2",
+          "type": "ingredient",
+          "name": "Tomato",
+          "quantity": 1,
+          "unit": "piece",
+          "emoji": "🍅"
+        },
+        {
+          "id": "card-1777810537475-3",
+          "type": "ingredient",
+          "name": "Chilli Powder",
+          "quantity": 2,
+          "unit": "tbsp",
+          "emoji": "🌶"
+        },
+        {
+          "id": "card-1777810546806-4",
+          "type": "ingredient",
+          "name": "Salt",
+          "quantity": 2,
+          "unit": "tbsp",
+          "emoji": "🧂",
+          "notes": "Depends on your tastebuds"
+        },
+        {
+          "id": "card-1777810604034-5",
+          "type": "ingredient",
+          "name": "Coriander",
+          "quantity": 5,
+          "unit": "bunch",
+          "emoji": "🍃"
+        },
+        {
+          "id": "card-1777810623553-6",
+          "type": "ingredient",
+          "name": "Green Chilli",
+          "quantity": 4,
+          "unit": "piece",
+          "emoji": "🍽️"
+        },
+        {
+          "id": "card-1777810638519-7",
+          "type": "ingredient",
+          "name": "Lemon",
+          "quantity": 1,
+          "unit": "piece",
+          "emoji": "🍋"
+        },
+        {
+          "id": "card-1777810653241-8",
+          "type": "ingredient",
+          "name": "curd",
+          "quantity": 2,
+          "unit": "tbsp",
+          "emoji": "🥣"
+        },
+        {
+          "id": "card-1777810685606-9",
+          "type": "ingredient",
+          "name": "Oil",
+          "quantity": 5,
+          "unit": "tbsp",
+          "emoji": "🥄",
+          "notes": "depends on reciepe"
+        },
+        {
+          "id": "card-1777810718139-10",
+          "type": "ingredient",
+          "name": "Cashew",
+          "quantity": 10,
+          "unit": "piece",
+          "emoji": "🍽️"
+        },
+        {
+          "id": "card-1777810728967-11",
+          "type": "ingredient",
+          "name": "Biriyani Whole Spices",
+          "quantity": 2,
+          "unit": "tbsp",
+          "emoji": "🪵"
+        },
+        {
+          "id": "card-1777810814318-12",
+          "type": "ingredient",
+          "name": "Mint Leaves",
+          "quantity": 15,
+          "unit": "bunch",
+          "emoji": "🌿"
+        },
+        {
+          "id": "card-1777947151958-1",
+          "type": "ingredient",
+          "name": "Ghee",
+          "quantity": 3,
+          "unit": "tbsp",
+          "emoji": "🍯"
+        },
+        {
+          "id": "card-1777947209259-2",
+          "type": "ingredient",
+          "name": "Kasuri Methi",
+          "quantity": 1,
+          "unit": "tbsp",
+          "emoji": "🌿"
+        },
+        {
+          "id": "card-1777947314196-3",
+          "type": "ingredient",
+          "name": "Chicken",
+          "quantity": 500,
+          "unit": "g",
+          "emoji": "🐔"
+        },
+        {
+          "id": "card-1777947332179-4",
+          "type": "ingredient",
+          "name": "Turmeric Powder",
+          "quantity": 1,
+          "unit": "tbsp",
+          "emoji": "✨"
+        },
+        {
+          "id": "card-1777947347992-5",
+          "type": "ingredient",
+          "name": "Corriander Powder",
+          "quantity": 1,
+          "unit": "tbsp",
+          "emoji": "🥄"
+        },
+        {
+          "id": "card-1777947462974-7",
+          "type": "ingredient",
+          "name": "Ginger Garlic Paste",
+          "quantity": 2,
+          "unit": "tbsp",
+          "emoji": "🥣"
+        }
+      ]
+    },
+    {
+      "id": "stage-1777947588177-3g7n9",
+      "name": "Marinate chicken",
+      "cards": [
+        {
+          "id": "card-1777947598075-8",
+          "type": "step",
+          "text": "Mix:\n\nChicken,\nCurd,\nGinger garlic paste,\nChilli powder,\nTurmeric,\nSalt,\nBiriyani powder,\nLemon juice,\nLittle oil\n\n& Rest 30–60 mins minimum (longer = better flavor)",
+          "timerMinutes": 60
+        }
+      ]
+    },
+    {
+      "id": "stage-1777947786061-onbtt",
+      "name": "Base preparation",
+      "cards": [
+        {
+          "id": "card-1777947804093-9",
+          "type": "step",
+          "text": "Heat a thick pot and add 🥄 oil with 🍯 ghee. Fry 🍽️ cashews and keep them aside. In the same pot, add 🪵 biriyani whole spices, then add sliced 🧅 onions and cook until they turn golden brown."
+        }
+      ]
+    },
+    {
+      "id": "stage-1777947951042-71btu",
+      "name": "Masala cooking",
+      "cards": [
+        {
+          "id": "card-1777947955876-10",
+          "type": "step",
+          "text": "Add 🌶 green chillies and 🥣 ginger garlic paste, then sauté briefly. Add 🍅 tomatoes and cook until soft. Add 🌶 chilli powder, ✨ turmeric powder, 🥄 coriander powder, 🧂 biriyani powder, and 🧂 salt, and cook until the oil separates from the masala."
+        }
+      ]
+    },
+    {
+      "id": "stage-1777948008726-yv7kk",
+      "name": "Chicken cooking",
+      "cards": [
+        {
+          "id": "card-1777948013876-11",
+          "type": "step",
+          "text": "Add the marinated 🐔 chicken and cook on medium flame until it is about 70% done. Add 🌿 mint leaves, 🍃 coriander leaves, and crushed 🌿 kasuri methi, then mix well."
+        }
+      ]
+    },
+    {
+      "id": "stage-1777948084793-jnygu",
+      "name": "Rice layering",
+      "cards": [
+        {
+          "id": "card-1777948090325-12",
+          "type": "step",
+          "text": "Add soaked rice into the pot and pour water (around 1:2 ratio). Adjust salt. Top with 🍯 ghee, fried 🍽️ cashews, and a little more 🌿 mint and 🍃 coriander."
+        }
+      ]
+    },
+    {
+      "id": "stage-1777948123324-sc9i6",
+      "name": "cooking",
+      "cards": [
+        {
+          "id": "card-1777948131643-13",
+          "type": "step",
+          "text": "Cover the pot tightly and cook on low flame for 15–20 minutes until the rice is fully cooked and aromatic."
+        }
+      ]
+    },
+    {
+      "id": "stage-1777948155991-9bxgu",
+      "name": "Finishing",
+      "cards": [
+        {
+          "id": "card-1777948162942-14",
+          "type": "step",
+          "text": "Switch off the flame and let the biryani rest covered for 5–10 minutes. Gently mix before serving."
+        }
+      ]
+    },
+    {
+      "id": "stage-1777948169811-d6rr8",
+      "name": "References",
+      "cards": [
+        {
+          "id": "card-1777948302691-15",
+          "type": "video",
+          "url": "https://youtu.be/UboUYCbLB6I?si=VfghXhuRJiAFVKZk",
+          "title": "Chicken Biriyani "
+        },
+        {
+          "id": "card-1777948327175-16",
+          "type": "video",
+          "url": "https://youtu.be/_AAfGqEqmWM?si=nvIc9peg7nhA-e1X",
+          "title": "Chicken Biriyani"
+        }
+      ]
+    }
+  ]
+}

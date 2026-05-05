@@ -1,0 +1,116 @@
+{
+  "id": "abc-detox-juice",
+  "meta": {
+    "name": "ABC Detox Juice",
+    "description": "A simple, nutrient-dense juice made with fresh vegetables and fruits. It’s slightly earthy from beetroot, fresh from mint, and naturally sweetened with dates. no added sugar needed. Good for a quick morning boost.",
+    "cuisine": "Urban Life",
+    "servings": 2,
+    "prepTime": 10,
+    "cookTime": 5,
+    "tags": [
+      "juice",
+      "detox",
+      "summer",
+      "boost",
+      "immune"
+    ],
+    "icon": "🥤",
+    "createdAt": "2026-05-05T02:42:31.490Z",
+    "updatedAt": "2026-05-05T02:43:40.491Z"
+  },
+  "stages": [
+    {
+      "id": "stage-1777948596130-usjsb",
+      "name": "Prep",
+      "cards": [
+        {
+          "id": "card-1777948702408-1",
+          "type": "ingredient",
+          "name": "Carrot",
+          "quantity": 1,
+          "unit": "piece",
+          "emoji": "🥕"
+        },
+        {
+          "id": "card-1777948716740-2",
+          "type": "ingredient",
+          "name": "BeetRoot",
+          "quantity": 1,
+          "unit": "whole",
+          "emoji": "🍽️"
+        },
+        {
+          "id": "card-1777948745989-3",
+          "type": "ingredient",
+          "name": "Cucumber",
+          "quantity": 1,
+          "unit": "piece",
+          "emoji": "🥒"
+        },
+        {
+          "id": "card-1777948772640-4",
+          "type": "ingredient",
+          "name": "Amla",
+          "quantity": 4,
+          "unit": "piece",
+          "emoji": "🍈"
+        },
+        {
+          "id": "card-1777948790024-5",
+          "type": "ingredient",
+          "name": "Dates",
+          "quantity": 6,
+          "unit": "piece",
+          "emoji": "🌴"
+        },
+        {
+          "id": "card-1777948810856-6",
+          "type": "ingredient",
+          "name": "Mint Leaves",
+          "quantity": 10,
+          "unit": "bunch",
+          "emoji": "🌿"
+        }
+      ]
+    },
+    {
+      "id": "stage-1777948833522-rb17r",
+      "name": "Chopping",
+      "cards": [
+        {
+          "id": "card-1777948861307-8",
+          "type": "step",
+          "text": "Wash and chop 🥕 carrot, beetroot, and 🥒 cucumber into small pieces. Remove seeds from 🍈 amla and 🌴 dates. Keep 🌿 mint leaves ready."
+        }
+      ]
+    },
+    {
+      "id": "stage-1777948872873-8zyor",
+      "name": "Blending",
+      "cards": [
+        {
+          "id": "card-1777948876288-9",
+          "type": "step",
+          "text": "Add 🥕 carrot, beetroot, 🥒 cucumber, 🍈 amla, 🌿 mint leaves, and 🌴 dates into a blender. Add a little water."
+        },
+        {
+          "id": "card-1777948900740-10",
+          "type": "note",
+          "text": "Blend until smooth. Adjust water based on thickness.",
+          "color": "pink"
+        }
+      ]
+    },
+    {
+      "id": "stage-1777948942855-d8y87",
+      "name": "Serving",
+      "cards": [
+        {
+          "id": "card-1777948947889-11",
+          "type": "step",
+          "text": "Pour into two glass bottles, refrigerate, and serve chilled."
+        }
+      ]
+    }
+  ]
+}

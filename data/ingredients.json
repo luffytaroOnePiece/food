@@ -1,8 +1,24 @@
 {
   "items": [
     {
+      "name": "Amla",
+      "emoji": "🍈"
+    },
+    {
+      "name": "BeetRoot",
+      "emoji": "🍽️"
+    },
+    {
       "name": "Bell Pepper",
       "emoji": "🫑"
+    },
+    {
+      "name": "Biriyani Powder",
+      "emoji": "🧂"
+    },
+    {
+      "name": "Biriyani Whole Spices",
+      "emoji": "🪵"
     },
     {
       "name": "Carrot",
@@ -25,8 +41,24 @@
       "emoji": "🍃"
     },
     {
+      "name": "Corriander Powder",
+      "emoji": "🥄"
+    },
+    {
+      "name": "Cucumber",
+      "emoji": "🥒"
+    },
+    {
+      "name": "curd",
+      "emoji": "🥣"
+    },
+    {
       "name": "Curry Leaves",
       "emoji": "🌿"
+    },
+    {
+      "name": "Dates",
+      "emoji": "🌴"
     },
     {
       "name": "Dried Red Chilli",
@@ -37,8 +69,16 @@
       "emoji": "🧄"
     },
     {
+      "name": "Ghee",
+      "emoji": "🍯"
+    },
+    {
       "name": "Ginger",
       "emoji": "🫚"
+    },
+    {
+      "name": "Ginger Garlic Paste",
+      "emoji": "🥣"
     },
     {
       "name": "Green Chilli",
@@ -53,8 +93,16 @@
       "emoji": "🧂"
     },
     {
+      "name": "Kasuri Methi",
+      "emoji": "🌿"
+    },
+    {
       "name": "Lemon",
       "emoji": "🍋"
+    },
+    {
+      "name": "Mint Leaves",
+      "emoji": "🌿"
     },
     {
       "name": "Oil",
