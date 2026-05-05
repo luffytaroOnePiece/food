@@ -1,6 +1,39 @@
 {
   "recipes": [
     {
+      "id": "abc-detox-juice",
+      "filename": "abc-detox-juice.json",
+      "name": "ABC Detox Juice",
+      "cuisine": "Urban Life",
+      "tags": [
+        "juice",
+        "detox",
+        "summer",
+        "boost",
+        "immune"
+      ],
+      "icon": "🥤",
+      "prepTime": 10,
+      "cookTime": 5
+    },
+    {
+      "id": "andhra-style-chicken-biriyani",
+      "filename": "andhra-style-chicken-biriyani.json",
+      "name": "Andhra Style Chicken Biriyani",
+      "cuisine": "Andhra",
+      "tags": [
+        "biriyani",
+        "spicy",
+        "andhra",
+        "chicken",
+        "rice",
+        "non veg"
+      ],
+      "icon": "🍽️",
+      "prepTime": 20,
+      "cookTime": 60
+    },
+    {
       "id": "lemon-chicken-pepper-soup",
       "filename": "lemon-chicken-pepper-soup.json",
       "name": "Lemon Chicken Pepper Soup",
