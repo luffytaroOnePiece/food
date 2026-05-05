@@ -1,5 +1,6 @@
 import { useState, type KeyboardEvent } from 'react';
 import { useBuilderStore } from '@store/builderStore';
+import { GalleryPicker } from './GalleryPicker';
 import styles from './MetaPanel.module.css';
 
 export function MetaPanel() {
@@ -136,6 +137,9 @@ export function MetaPanel() {
           />
         </div>
       </div>
+
+      {/* Featured Photos */}
+      <GalleryPicker />
     </aside>
   );
 }

@@ -58,6 +58,7 @@ export interface RecipeMeta {
   tags: string[];
   icon: string;       // emoji
   coverImage?: string;
+  galleryImages?: number[];  // IDs from foodmetadata.json
   createdAt: string;  // ISO
   updatedAt: string;  // ISO
 }

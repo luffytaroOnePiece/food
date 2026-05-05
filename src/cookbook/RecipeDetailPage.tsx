@@ -1,6 +1,6 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Clock, ChefHat, Printer, Pencil, Trash2 } from 'lucide-react';
+import { ArrowLeft, Clock, ChefHat, Printer, Pencil, Trash2, ImageIcon } from 'lucide-react';
 import { useRecipe } from '@hooks/useRecipes';
 import { useServingsScale } from '@hooks/useServingsScale';
 import { StageTimeline } from './components/StageTimeline/StageTimeline';
@@ -97,6 +97,37 @@ const s = {
     marginBottom: '40px',
   } as React.CSSProperties,
   timelineSection: {} as React.CSSProperties,
+  gallerySection: {
+    marginBottom: '40px',
+  } as React.CSSProperties,
+  galleryHeader: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '8px',
+    fontFamily: 'var(--font-display)',
+    fontSize: '1.125rem',
+    fontWeight: 700,
+    color: 'var(--color-ink)',
+    marginBottom: '16px',
+  } as React.CSSProperties,
+  galleryScroll: {
+    display: 'flex',
+    gap: '16px',
+    overflowX: 'auto',
+    paddingBottom: '8px',
+    scrollSnapType: 'x mandatory',
+  } as React.CSSProperties,
+  galleryImg: {
+    flexShrink: 0,
+    width: '280px',
+    height: '200px',
+    objectFit: 'cover',
+    borderRadius: '10px',
+    boxShadow: 'var(--shadow-card)',
+    scrollSnapAlign: 'start',
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+    cursor: 'pointer',
+  } as React.CSSProperties,
 } as const;
 
 export default function RecipeDetailPage() {
@@ -144,6 +175,8 @@ export default function RecipeDetailPage() {
   }
 
   const totalTime = recipe.meta.prepTime + recipe.meta.cookTime;
+  const galleryImages = recipe.meta.galleryImages ?? [];
+  const GALLERY_BASE = 'https://raw.githubusercontent.com/luffytaroOnePiece/foodgallery/main';
 
   return (
     <motion.div
@@ -185,6 +218,35 @@ export default function RecipeDetailPage() {
           </div>
         )}
       </div>
+
+      {/* Featured Photos */}
+      {galleryImages.length > 0 && (
+        <div style={s.gallerySection}>
+          <div style={s.galleryHeader}>
+            <ImageIcon size={18} style={{ color: 'var(--color-saffron)' }} />
+            Featured Photos
+          </div>
+          <div style={s.galleryScroll}>
+            {galleryImages.map((imgId) => (
+              <img
+                key={imgId}
+                src={`${GALLERY_BASE}/${imgId}.jpg`}
+                alt={`Recipe photo ${imgId}`}
+                style={s.galleryImg}
+                loading="lazy"
+                onMouseOver={(e) => {
+                  (e.currentTarget as HTMLImageElement).style.transform = 'translateY(-3px) scale(1.02)';
+                  (e.currentTarget as HTMLImageElement).style.boxShadow = 'var(--shadow-lifted)';
+                }}
+                onMouseOut={(e) => {
+                  (e.currentTarget as HTMLImageElement).style.transform = '';
+                  (e.currentTarget as HTMLImageElement).style.boxShadow = 'var(--shadow-card)';
+                }}
+              />
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Toolbar */}
       <div style={s.toolbar} className="no-print">
