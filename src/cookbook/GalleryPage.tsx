@@ -1,12 +1,12 @@
-import { useState, useCallback, useEffect, useRef, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Shuffle, Camera, Maximize2, X, Search } from 'lucide-react';
-import styles from './GalleryPage.module.css';
+import { useState, useCallback, useEffect, useRef, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Shuffle, Camera, Maximize2, X, Search } from "lucide-react";
+import styles from "./GalleryPage.module.css";
 
 const IMAGE_START = 1;
-const IMAGE_END = 4;
+const IMAGE_END = 6;
 const BASE_URL =
-  'https://raw.githubusercontent.com/luffytaroOnePiece/foodgallery/main';
+  "https://raw.githubusercontent.com/luffytaroOnePiece/foodgallery/main";
 
 type Metadata = Record<string, string>;
 
@@ -43,7 +43,7 @@ function shuffleArray<T>(arr: T[]): T[] {
 export default function GalleryPage() {
   const [metadata, setMetadata] = useState<Metadata>({});
   const [images, setImages] = useState<GalleryImage[]>([]);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   const [lightbox, setLightbox] = useState<number | null>(null);
   const [isShuffling, setIsShuffling] = useState(false);
   const shuffleKeyRef = useRef(0);
@@ -80,10 +80,10 @@ export default function GalleryPage() {
   // Close lightbox on Escape
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setLightbox(null);
+      if (e.key === "Escape") setLightbox(null);
     };
-    window.addEventListener('keydown', handleKey);
-    return () => window.removeEventListener('keydown', handleKey);
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
   }, []);
 
   // Filter images by search query
@@ -103,7 +103,8 @@ export default function GalleryPage() {
         <span className={styles.heroIcon}>📸</span>
         <h1 className={styles.heroTitle}>Food Gallery</h1>
         <p className={styles.heroSubtitle}>
-          A visual feast — our favourite dishes captured in their delicious glory.
+          A visual feast — our favourite dishes captured in their delicious
+          glory.
         </p>
       </div>
 
@@ -127,7 +128,7 @@ export default function GalleryPage() {
           disabled={isShuffling || images.length === 0}
           id="gallery-shuffle-btn"
         >
-          <Shuffle size={16} className={isShuffling ? styles.spinning : ''} />
+          <Shuffle size={16} className={isShuffling ? styles.spinning : ""} />
           Shuffle Photos
         </button>
         <span className={styles.photoCount}>
