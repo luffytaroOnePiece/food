@@ -1,0 +1,364 @@
+{
+  "id": "schezwan-chicken-fried-rice",
+  "meta": {
+    "name": "Schezwan Chicken Fried Rice",
+    "description": "Smoky wok-tossed fried rice packed with spicy Schezwan flavor, juicy chicken, scrambled egg, crunchy vegetables, and fresh spring onion. A bold street-style Indo-Chinese classic made with high-flame cooking and rich restaurant-style taste.",
+    "cuisine": "Indo-Chinese ",
+    "servings": 1,
+    "prepTime": 15,
+    "cookTime": 60,
+    "tags": [
+      "fried rice",
+      "chinese",
+      "chicken",
+      "schezwan"
+    ],
+    "icon": "🍽️",
+    "createdAt": "2026-05-10T16:04:11.434Z",
+    "updatedAt": "2026-05-10T16:29:55.903Z",
+    "galleryImages": [
+      14,
+      13,
+      15
+    ]
+  },
+  "stages": [
+    {
+      "id": "stage-1778427270900-67zzp",
+      "name": "Prep",
+      "cards": [
+        {
+          "id": "card-1778427390616-1",
+          "type": "ingredient",
+          "name": "Spring Onion",
+          "quantity": 5,
+          "unit": "bunch",
+          "emoji": "🧅"
+        },
+        {
+          "id": "card-1778427426499-2",
+          "type": "ingredient",
+          "name": "Chicken",
+          "quantity": 150,
+          "unit": "g",
+          "emoji": "🐔",
+          "notes": "boneless chicken"
+        },
+        {
+          "id": "card-1778427444199-3",
+          "type": "ingredient",
+          "name": "Salt",
+          "quantity": 2,
+          "unit": "tsp",
+          "emoji": "🧂"
+        },
+        {
+          "id": "card-1778427448232-4",
+          "type": "ingredient",
+          "name": "Chilli Powder",
+          "quantity": 1,
+          "unit": "tsp",
+          "emoji": "🌶"
+        },
+        {
+          "id": "card-1778427453182-5",
+          "type": "ingredient",
+          "name": "Pepper Powder",
+          "quantity": 0.5,
+          "unit": "tbsp",
+          "emoji": "🧂"
+        },
+        {
+          "id": "card-1778427481599-6",
+          "type": "ingredient",
+          "name": "Ginger Garlic Paste",
+          "quantity": 0.5,
+          "unit": "tbsp",
+          "emoji": "🥣",
+          "notes": ""
+        },
+        {
+          "id": "card-1778427506432-7",
+          "type": "ingredient",
+          "name": "soy sauce",
+          "quantity": 0.5,
+          "unit": "tbsp",
+          "emoji": "🫙"
+        },
+        {
+          "id": "card-1778427532449-8",
+          "type": "ingredient",
+          "name": "Corn Flour",
+          "quantity": 1.5,
+          "unit": "tbsp",
+          "emoji": "🌽"
+        },
+        {
+          "id": "card-1778427556232-9",
+          "type": "ingredient",
+          "name": "Rice",
+          "quantity": 1,
+          "unit": "cup",
+          "emoji": "🍚"
+        },
+        {
+          "id": "card-1778427569332-10",
+          "type": "ingredient",
+          "name": "Egg",
+          "quantity": 2,
+          "unit": "piece",
+          "emoji": "🥚"
+        },
+        {
+          "id": "card-1778427596049-11",
+          "type": "ingredient",
+          "name": "Garlic",
+          "quantity": 3,
+          "unit": "piece",
+          "emoji": "🧄"
+        },
+        {
+          "id": "card-1778427616298-12",
+          "type": "ingredient",
+          "name": "Carrot",
+          "quantity": 0.5,
+          "unit": "slice",
+          "emoji": "🥕"
+        },
+        {
+          "id": "card-1778427633732-13",
+          "type": "ingredient",
+          "name": "Bell Pepper",
+          "quantity": 0.5,
+          "unit": "slice",
+          "emoji": "🫑"
+        },
+        {
+          "id": "card-1778427666215-14",
+          "type": "ingredient",
+          "name": "Green Chilli Sauce",
+          "quantity": 1,
+          "unit": "tsp",
+          "emoji": "🍽️"
+        },
+        {
+          "id": "card-1778427701165-15",
+          "type": "ingredient",
+          "name": "Vinegar",
+          "quantity": 1,
+          "unit": "tsp",
+          "emoji": "🍶"
+        },
+        {
+          "id": "card-1778427766081-16",
+          "type": "ingredient",
+          "name": "Ching's Secret Schezwan Stir Fry Sauce",
+          "quantity": 2,
+          "unit": "tsp",
+          "emoji": "🌶️"
+        },
+        {
+          "id": "card-1778427911931-1",
+          "type": "ingredient",
+          "name": "Schezwan Fried Rice Masala mix",
+          "quantity": 2,
+          "unit": "tbsp",
+          "emoji": "🍽️"
+        },
+        {
+          "id": "card-1778427927731-2",
+          "type": "ingredient",
+          "name": "Oil",
+          "quantity": 0,
+          "unit": "g",
+          "emoji": "🥄"
+        },
+        {
+          "id": "card-1778427947131-3",
+          "type": "ingredient",
+          "name": "Coriander",
+          "quantity": 1,
+          "unit": "bunch",
+          "emoji": "🍃"
+        }
+      ]
+    },
+    {
+      "id": "stage-1778428096730-94lun",
+      "name": "Prep the Rice 🍚",
+      "cards": [
+        {
+          "id": "card-1778428108164-4",
+          "type": "step",
+          "text": "Cook rice with slightly less water so grains stay separate. Add little oil and 2 Cloves"
+        },
+        {
+          "id": "card-1778428147830-5",
+          "type": "note",
+          "text": "Cool rice completely before frying.",
+          "color": "blue"
+        }
+      ]
+    },
+    {
+      "id": "stage-1778428158577-odr4s",
+      "name": "Marinate the Chicken ",
+      "cards": [
+        {
+          "id": "card-1778428219154-6",
+          "type": "step",
+          "text": "In a bowl, add 🐔 boneless chicken, 🧂 salt, 🌶️ chilli powder, 🧂 pepper powder, 🥣 ginger garlic paste, 🫙 soy sauce, and 🌽 corn flour. Mix everything well and let it rest for 15–20 minutes."
+        },
+        {
+          "id": "card-1778428231521-7",
+          "type": "note",
+          "text": "Corn flour helps the chicken stay juicy while giving slight crispy edges during frying.",
+          "color": "blue"
+        }
+      ]
+    },
+    {
+      "id": "stage-1778428236788-sylui",
+      "name": "Cut the vegetables 🔪",
+      "cards": [
+        {
+          "id": "card-1778428251487-8",
+          "type": "step",
+          "text": "Finely chop 🧄 garlic and slice 🥕 carrot and 🫑 capsicum into thin strips/cubes. Separate the 🧅 spring onion whites and 🌱 greens. Use the whites while cooking and save the greens for garnish."
+        },
+        {
+          "id": "card-1778428276471-9",
+          "type": "note",
+          "text": "Thinly sliced/cubed vegetables cook quickly and give restaurant-style texture.",
+          "color": "blue"
+        }
+      ]
+    },
+    {
+      "id": "stage-1778428301037-5lkg9",
+      "name": "Cook the chicken",
+      "cards": [
+        {
+          "id": "card-1778428306054-10",
+          "type": "step",
+          "text": "Heat 🥄 oil in a wok or pan on high flame. Add the marinated chicken and cook until it becomes slightly crispy and fully cooked. Remove and keep aside."
+        },
+        {
+          "id": "card-1778428369503-12",
+          "type": "note",
+          "text": "High flame helps create smoky wok flavor and prevents the chicken from becoming watery.",
+          "color": "blue"
+        }
+      ]
+    },
+    {
+      "id": "stage-1778428439720-1ls6e",
+      "name": "Scramble the eggs 🥚",
+      "cards": [
+        {
+          "id": "card-1778428453269-13",
+          "type": "step",
+          "text": "Add little oil to the same pan and pour beaten eggs with a pinch of salt. Scramble quickly on high flame into small pieces and keep aside."
+        },
+        {
+          "id": "card-1778428467203-14",
+          "type": "note",
+          "text": "Small scrambled egg pieces mix better with fried rice.",
+          "color": "blue"
+        }
+      ]
+    },
+    {
+      "id": "stage-1778428482335-90xnf",
+      "name": "Stir fry the vegetables 🥬",
+      "cards": [
+        {
+          "id": "card-1778428525336-15",
+          "type": "step",
+          "text": "Add little more oil if needed. Add 🧄 garlic and 🧅 spring onion whites first and sauté for few seconds. Then add 🥕 carrot and 🫑 capsicum. Toss on high flame for 1–2 minutes so the vegetables stay crunchy."
+        },
+        {
+          "id": "card-1778428555653-17",
+          "type": "note",
+          "text": "Do not overcook the vegetables. Slight crunch gives authentic Indo-Chinese fried rice feel.",
+          "color": "blue"
+        }
+      ]
+    },
+    {
+      "id": "stage-1778428574636-im83m",
+      "name": "Add the sauces 🌶️",
+      "cards": [
+        {
+          "id": "card-1778428579919-18",
+          "type": "step",
+          "text": "Add 🌶️ Schezwan Stir Fry Sauce, 🫙 soy sauce, Green chilli sauce, 🍶 vinegar, and 🌶️ Schezwan Fried Rice Masala mix. Stir quickly on high flame until everything combines well."
+        },
+        {
+          "id": "card-1778428669036-19",
+          "type": "note",
+          "text": "Too much sauce can make the rice soggy, so keep the balance light.",
+          "color": "blue"
+        }
+      ]
+    },
+    {
+      "id": "stage-1778428672468-zzs8j",
+      "name": "Toss the rice 🍚",
+      "cards": [
+        {
+          "id": "card-1778428761102-21",
+          "type": "step",
+          "text": "Add the cooked chicken, 🥚 scrambled eggs, and 🍚 cooled rice. Toss continuously on high flame until the sauces coat the rice evenly and the fried rice gets a smoky wok flavor."
+        },
+        {
+          "id": "card-1778428777268-22",
+          "type": "note",
+          "text": "Toss gently so the rice grains stay separate and don’t break.",
+          "color": "blue"
+        }
+      ]
+    },
+    {
+      "id": "stage-1778428788102-6611l",
+      "name": "Garnish and serve 🌱",
+      "cards": [
+        {
+          "id": "card-1778428792951-23",
+          "type": "step",
+          "text": "Switch off the flame and garnish with 🌱 spring onion greens and 🍃 little coriander leaves. Serve hot."
+        },
+        {
+          "id": "card-1778428806285-24",
+          "type": "note",
+          "text": "Adding spring onion greens at the end keeps their fresh aroma intact.",
+          "color": "blue"
+        }
+      ]
+    },
+    {
+      "id": "stage-1778428827202-ximhm",
+      "name": "References",
+      "cards": [
+        {
+          "id": "card-1778428905101-25",
+          "type": "video",
+          "url": "https://youtu.be/w6FFlG_GPoc?si=mJuFaOOOhDdcc-vj",
+          "title": " Schezwan Chicken Fried Rice"
+        },
+        {
+          "id": "card-1778428955784-26",
+          "type": "video",
+          "url": "https://youtu.be/CIVBFsEyViQ?si=w7Fjg1WVTOg2j7cj",
+          "title": "Schezwan Chicken Fried Rice"
+        },
+        {
+          "id": "card-1778429026451-27",
+          "type": "video",
+          "url": "https://youtu.be/qDbmxGtrgz0?si=0Q0-lXR3AY0T0unT",
+          "title": "Schezwan Chicken Fried Rice"
+        }
+      ]
+    }
+  ]
+}
