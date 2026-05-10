@@ -49,6 +49,21 @@
       "cookTime": 30
     },
     {
+      "id": "schezwan-chicken-fried-rice",
+      "filename": "schezwan-chicken-fried-rice.json",
+      "name": "Schezwan Chicken Fried Rice",
+      "cuisine": "Indo-Chinese ",
+      "tags": [
+        "fried rice",
+        "chinese",
+        "chicken",
+        "schezwan"
+      ],
+      "icon": "🍽️",
+      "prepTime": 15,
+      "cookTime": 60
+    },
+    {
       "id": "tamarind-rice",
       "filename": "tamarind-rice.json",
       "name": "Tamarind Rice",
