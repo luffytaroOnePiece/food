@@ -1,0 +1,354 @@
+{
+  "id": "dal-khichdi",
+  "meta": {
+    "name": "Dal Khichdi ",
+    "description": "A velvety blend of fragrant rice and slow-cooked lentils simmered in pure ghee for a rich, creamy, melt-in-your-mouth texture. Finished with a sizzling golden tadka of buttery cashews, crispy garlic slices, and aromatic inguva, bringing a bold traditional flavor with a premium gourmet touch. A soul-soothing comfort classic that perfectly balances wholesome goodness with indulgent crunch.",
+    "cuisine": "Andhra",
+    "servings": 2,
+    "prepTime": 15,
+    "cookTime": 40,
+    "tags": [
+      "andhra",
+      "dal",
+      "kichidi",
+      "comfort",
+      "lunch"
+    ],
+    "icon": "🍲",
+    "createdAt": "2026-05-11T11:41:46.956Z",
+    "updatedAt": "2026-05-11T11:44:54.635Z",
+    "galleryImages": [
+      16,
+      17
+    ]
+  },
+  "stages": [
+    {
+      "id": "stage-1778492772516-utcu7",
+      "name": "Prep",
+      "cards": [
+        {
+          "id": "card-1778492852859-1",
+          "type": "ingredient",
+          "name": "Rice",
+          "quantity": 0.5,
+          "unit": "cup",
+          "emoji": "🍚"
+        },
+        {
+          "id": "card-1778492892311-2",
+          "type": "ingredient",
+          "name": "Toor Dal",
+          "quantity": 0.5,
+          "unit": "cup",
+          "emoji": "🫘"
+        },
+        {
+          "id": "card-1778492907460-3",
+          "type": "ingredient",
+          "name": "Moong Dal",
+          "quantity": 0.5,
+          "unit": "cup",
+          "emoji": "🥣"
+        },
+        {
+          "id": "card-1778492972643-4",
+          "type": "ingredient",
+          "name": "Masoor Dal",
+          "quantity": 0.5,
+          "unit": "cup",
+          "emoji": "🥣"
+        },
+        {
+          "id": "card-1778493074210-5",
+          "type": "ingredient",
+          "name": "Biryani Leaves",
+          "quantity": 0.5,
+          "unit": "piece",
+          "emoji": "🍃"
+        },
+        {
+          "id": "card-1778493121243-6",
+          "type": "ingredient",
+          "name": "Cinnamon Stick:",
+          "quantity": 0.5,
+          "unit": "piece",
+          "emoji": "🪵"
+        },
+        {
+          "id": "card-1778493140660-7",
+          "type": "ingredient",
+          "name": "Cardamom",
+          "quantity": 1,
+          "unit": "piece",
+          "emoji": "🍽️"
+        },
+        {
+          "id": "card-1778493158692-8",
+          "type": "ingredient",
+          "name": "Cloves",
+          "quantity": 1,
+          "unit": "piece",
+          "emoji": "🍽️"
+        },
+        {
+          "id": "card-1778493179875-9",
+          "type": "ingredient",
+          "name": "Cumin Seeds",
+          "quantity": 1,
+          "unit": "tsp",
+          "emoji": "🍽️"
+        },
+        {
+          "id": "card-1778493203310-10",
+          "type": "ingredient",
+          "name": "Onion",
+          "quantity": 1,
+          "unit": "piece",
+          "emoji": "🧅"
+        },
+        {
+          "id": "card-1778493217860-11",
+          "type": "ingredient",
+          "name": "Ginger Garlic Paste",
+          "quantity": 0.5,
+          "unit": "tsp",
+          "emoji": "🥣"
+        },
+        {
+          "id": "card-1778493239442-12",
+          "type": "ingredient",
+          "name": "Green Chilli",
+          "quantity": 2,
+          "unit": "piece",
+          "emoji": "🍽️"
+        },
+        {
+          "id": "card-1778493256925-13",
+          "type": "ingredient",
+          "name": "Tomato",
+          "quantity": 1,
+          "unit": "piece",
+          "emoji": "🍅"
+        },
+        {
+          "id": "card-1778493270376-14",
+          "type": "ingredient",
+          "name": "Turmeric Powder",
+          "quantity": 0.5,
+          "unit": "tsp",
+          "emoji": "✨"
+        },
+        {
+          "id": "card-1778493284842-15",
+          "type": "ingredient",
+          "name": "Chilli Powder",
+          "quantity": 1,
+          "unit": "tsp",
+          "emoji": "🌶"
+        },
+        {
+          "id": "card-1778493308509-16",
+          "type": "ingredient",
+          "name": "Coriander Powder",
+          "quantity": 0.5,
+          "unit": "tsp",
+          "emoji": "🍽️"
+        },
+        {
+          "id": "card-1778493333942-17",
+          "type": "ingredient",
+          "name": "Garam Masala",
+          "quantity": 0.5,
+          "unit": "tsp",
+          "emoji": "🍽️"
+        },
+        {
+          "id": "card-1778493354475-18",
+          "type": "ingredient",
+          "name": "Coriander",
+          "quantity": 5,
+          "unit": "bunch",
+          "emoji": "🍃"
+        },
+        {
+          "id": "card-1778493380442-19",
+          "type": "ingredient",
+          "name": "Ghee",
+          "quantity": 2,
+          "unit": "tbsp",
+          "emoji": "🍯"
+        },
+        {
+          "id": "card-1778493406524-20",
+          "type": "ingredient",
+          "name": "Garlic",
+          "quantity": 3,
+          "unit": "piece",
+          "emoji": "🧄"
+        },
+        {
+          "id": "card-1778493420541-21",
+          "type": "ingredient",
+          "name": "Dried Red Chilli",
+          "quantity": 1,
+          "unit": "piece",
+          "emoji": "🌶"
+        },
+        {
+          "id": "card-1778493438358-22",
+          "type": "ingredient",
+          "name": "Cashew",
+          "quantity": 10,
+          "unit": "piece",
+          "emoji": "🍽️"
+        },
+        {
+          "id": "card-1778493498559-23",
+          "type": "ingredient",
+          "name": "Inguva",
+          "quantity": 1,
+          "unit": "tsp",
+          "emoji": "🧂"
+        }
+      ]
+    },
+    {
+      "id": "stage-1778493557809-dmrw6",
+      "name": "Preparation & Soaking",
+      "cards": [
+        {
+          "id": "card-1778498373262-25",
+          "type": "step",
+          "text": "First, take 0.5 cup Rice 🍚, 0.5 cup Toor Dal 🫘, 0.5 cup Moong Dal 🥣, and 0.5 cup Masoor Dal 🥣 in a large bowl."
+        },
+        {
+          "id": "card-1778498389146-26",
+          "type": "step",
+          "text": "Wash them thoroughly under clean water 💧 2-3 times to remove any dust."
+        },
+        {
+          "id": "card-1778498406328-27",
+          "type": "step",
+          "text": "Wash them thoroughly under clean water 💧 2-3 times to remove any dust."
+        }
+      ]
+    },
+    {
+      "id": "stage-1778498410478-atctt",
+      "name": "Sautéing the Aromatics",
+      "cards": [
+        {
+          "id": "card-1778498638907-28",
+          "type": "step",
+          "text": "Place a pressure cooker ⚙️ on the stove and add 2 tbsp Oil  to heat it up."
+        },
+        {
+          "id": "card-1778498652658-29",
+          "type": "step",
+          "text": "Once the oil heats up, toss in 0.5 piece Biryani Leaves 🍃, 0.5 piece Cinnamon Stick 🪵, 1 piece Cardamom 🍽️, 1 piece Cloves 🍽️, and 1 tsp Cumin Seeds 🍽️."
+        },
+        {
+          "id": "card-1778498668640-30",
+          "type": "step",
+          "text": "Fry them for a few seconds until they release a wonderful aroma 👃✨."
+        },
+        {
+          "id": "card-1778498684657-32",
+          "type": "step",
+          "text": "Add 1 chopped Onion 🧅 and sauté until it turns a light golden brown color."
+        },
+        {
+          "id": "card-1778498692791-33",
+          "type": "step",
+          "text": "Stir in 0.5 tsp Ginger Garlic Paste 🥣 and 2 slit Green Chillies 🍽️, frying until the raw smell disappears."
+        }
+      ]
+    },
+    {
+      "id": "stage-1778498705706-q65s6",
+      "name": "Spices & Veggie Base",
+      "cards": [
+        {
+          "id": "card-1778498715906-34",
+          "type": "step",
+          "text": "Add 1 chopped Tomato 🍅 and cook until it becomes soft and mushy."
+        },
+        {
+          "id": "card-1778498723407-35",
+          "type": "step",
+          "text": "Lower the flame and sprinkle in 0.5 tsp Turmeric Powder ✨, 1 tsp Chili Powder 🌶️, 0.5 tsp Coriander Powder 🍽️, 0.5 tsp Garam Masala 🍽️, and some Salt 🧂."
+        },
+        {
+          "id": "card-1778498731222-36",
+          "type": "step",
+          "text": "Mix everything well for a minute so the spices 🌶️ blend perfectly with the base."
+        }
+      ]
+    },
+    {
+      "id": "stage-1778498739874-ypk4c",
+      "name": "Pressure Cooking",
+      "cards": [
+        {
+          "id": "card-1778498750189-37",
+          "type": "step",
+          "text": "Drain the water from the soaked rice and dals 🍚🫘🥣 and add them into the cooker."
+        },
+        {
+          "id": "card-1778498769240-38",
+          "type": "step",
+          "text": "Mix gently for a minute so the grains are coated in masala and spices."
+        },
+        {
+          "id": "card-1778498789423-39",
+          "type": "step",
+          "text": "Pour in sufficient water 💧 (about 4 cups for a soft consistency) and add half of the 5 bunches of Coriander 🍃 (finely chopped)."
+        },
+        {
+          "id": "card-1778498808121-40",
+          "type": "step",
+          "text": "Close the lid 🔒 and pressure cook for 2-3 whistles on medium flame until the khichdi is very soft."
+        }
+      ]
+    },
+    {
+      "id": "stage-1778498815704-dszl3",
+      "name": "The Final Tadka (Tempering)",
+      "cards": [
+        {
+          "id": "card-1778498824589-41",
+          "type": "step",
+          "text": "In a small pan 🍳, heat a little more ghee and fry 3 pieces of chopped Garlic 🧄 until they turn dark golden."
+        },
+        {
+          "id": "card-1778498837822-42",
+          "type": "step",
+          "text": "Add 1 Dried Red Chilli 🌶️, 10 pieces of Cashews 🍽️, and 1 tsp Inguva (Asafoetida) 🧂 for that classic flavor."
+        },
+        {
+          "id": "card-1778498845356-43",
+          "type": "step",
+          "text": "Pour this sizzling tempering 🔥 directly over the cooked khichdi and cover with a lid immediately to trap the scent."
+        },
+        {
+          "id": "card-1778498854172-44",
+          "type": "step",
+          "text": "Garnish with the remaining fresh Coriander 🍃 and serve your delicious meal hot! 😋🥘"
+        }
+      ]
+    },
+    {
+      "id": "stage-1778499777486-wc0iv",
+      "name": "References",
+      "cards": [
+        {
+          "id": "card-1778499791903-1",
+          "type": "video",
+          "url": "https://youtu.be/fajrPrTiT-Y?si=u02Fh_QYZkeZElOv ",
+          "title": "Dal Kichidi"
+        }
+      ]
+    }
+  ]
+}
