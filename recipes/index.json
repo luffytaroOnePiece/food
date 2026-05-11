@@ -25,13 +25,27 @@
         "biriyani",
         "spicy",
         "andhra",
-        "chicken",
-        "rice",
-        "non veg"
+        "chicken"
       ],
       "icon": "🍽️",
       "prepTime": 20,
       "cookTime": 60
+    },
+    {
+      "id": "dal-khichdi",
+      "filename": "dal-khichdi.json",
+      "name": "Dal Khichdi ",
+      "cuisine": "Andhra",
+      "tags": [
+        "andhra",
+        "dal",
+        "kichidi",
+        "comfort",
+        "lunch"
+      ],
+      "icon": "🍲",
+      "prepTime": 15,
+      "cookTime": 40
     },
     {
       "id": "lemon-chicken-pepper-soup",
@@ -71,7 +85,6 @@
       "tags": [
         "andhra",
         "rice",
-        "lunch",
         "festival",
         "south indian"
       ],
