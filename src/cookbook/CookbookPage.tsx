@@ -187,7 +187,7 @@ export default function CookbookPage() {
   const filtered = useMemo(() => {
     let result = recipes;
     if (cuisine) {
-      result = result.filter((r) => r.cuisine === cuisine);
+      result = result.filter((r) => r.cuisine?.trim() === cuisine);
     }
     if (search.trim()) {
       const q = search.toLowerCase();
@@ -195,7 +195,7 @@ export default function CookbookPage() {
         (r) =>
           r.name.toLowerCase().includes(q) ||
           r.tags.some((t) => t.toLowerCase().includes(q)) ||
-          r.cuisine.toLowerCase().includes(q)
+          r.cuisine?.trim().toLowerCase().includes(q)
       );
     }
     return result;

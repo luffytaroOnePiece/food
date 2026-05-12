@@ -20,7 +20,7 @@ export function SearchFilter({
   resultCount,
 }: SearchFilterProps) {
   // Extract unique cuisines
-  const cuisines = [...new Set(recipes.map((r) => r.cuisine).filter(Boolean))].sort();
+  const cuisines = [...new Set(recipes.map((r) => r.cuisine?.trim()).filter(Boolean))].sort();
 
   return (
     <div className={styles.searchFilter}>
@@ -35,30 +35,32 @@ export function SearchFilter({
         />
       </div>
 
-      {cuisines.length > 0 && (
-        <div className={styles.filterGroup}>
-          <span className={styles.filterLabel}>Cuisine:</span>
-          <button
-            className={`${styles.filterChip} ${activeCuisine === '' ? styles.active : ''}`}
-            onClick={() => onCuisineChange('')}
-          >
-            All
-          </button>
-          {cuisines.map((cuisine) => (
+      <div className={styles.bottomRow}>
+        {cuisines.length > 0 && (
+          <div className={styles.filterGroup}>
+            <span className={styles.filterLabel}>Cuisine:</span>
             <button
-              key={cuisine}
-              className={`${styles.filterChip} ${activeCuisine === cuisine ? styles.active : ''}`}
-              onClick={() => onCuisineChange(cuisine)}
+              className={`${styles.filterChip} ${activeCuisine === '' ? styles.active : ''}`}
+              onClick={() => onCuisineChange('')}
             >
-              {cuisine}
+              All
             </button>
-          ))}
-        </div>
-      )}
+            {cuisines.map((cuisine) => (
+              <button
+                key={cuisine}
+                className={`${styles.filterChip} ${activeCuisine === cuisine ? styles.active : ''}`}
+                onClick={() => onCuisineChange(cuisine)}
+              >
+                {cuisine}
+              </button>
+            ))}
+          </div>
+        )}
 
-      <span className={styles.resultCount}>
-        {resultCount} recipe{resultCount !== 1 ? 's' : ''}
-      </span>
+        <span className={styles.resultCount}>
+          {resultCount} recipe{resultCount !== 1 ? 's' : ''}
+        </span>
+      </div>
     </div>
   );
 }

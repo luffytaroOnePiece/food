@@ -13,21 +13,46 @@ interface GalleryImage {
   src: string;
   alt: string;
   caption: string;
+  orientation: 'horizontal' | 'vertical' | 'square';
 }
 
-function buildImages(meta: Metadata): GalleryImage[] {
+async function buildImages(meta: Metadata): Promise<GalleryImage[]> {
   // Derive image list from metadata keys — no hardcoded range needed
   const ids = Object.keys(meta)
     .map(Number)
     .filter((n) => !isNaN(n))
     .sort((a, b) => a - b);
 
-  return ids.map((id) => ({
-    id,
-    src: `${BASE_URL}/${id}.jpg`,
-    alt: meta[String(id)],
-    caption: meta[String(id)],
-  }));
+  const promises = ids.map((id) => {
+    return new Promise<GalleryImage>((resolve) => {
+      const src = `${BASE_URL}/${id}.jpg`;
+      const img = new Image();
+      img.onload = () => {
+        let orientation: 'horizontal' | 'vertical' | 'square' = 'square';
+        if (img.naturalWidth > img.naturalHeight) orientation = 'horizontal';
+        else if (img.naturalHeight > img.naturalWidth) orientation = 'vertical';
+        resolve({
+          id,
+          src,
+          alt: meta[String(id)],
+          caption: meta[String(id)],
+          orientation,
+        });
+      };
+      img.onerror = () => {
+        resolve({
+          id,
+          src,
+          alt: meta[String(id)],
+          caption: meta[String(id)],
+          orientation: 'horizontal',
+        });
+      };
+      img.src = src;
+    });
+  });
+
+  return Promise.all(promises);
 }
 
 function shuffleArray<T>(arr: T[]): T[] {
@@ -43,6 +68,7 @@ export default function GalleryPage() {
   const [metadata, setMetadata] = useState<Metadata>({});
   const [images, setImages] = useState<GalleryImage[]>([]);
   const [search, setSearch] = useState("");
+  const [orientationFilter, setOrientationFilter] = useState<'all' | 'vertical' | 'horizontal'>('all');
   const [lightbox, setLightbox] = useState<number | null>(null);
   const [isShuffling, setIsShuffling] = useState(false);
   const shuffleKeyRef = useRef(0);
@@ -53,28 +79,31 @@ export default function GalleryPage() {
     if (metaLoaded.current) return;
     metaLoaded.current = true;
 
-    fetch(`${import.meta.env.BASE_URL}foodmetadata.json`)
-      .then((r) => r.json())
-      .then((data: Metadata) => {
+    async function load() {
+      try {
+        const r = await fetch(`${import.meta.env.BASE_URL}foodmetadata.json`);
+        const data = await r.json();
         setMetadata(data);
-        setImages(shuffleArray(buildImages(data)));
-      })
-      .catch(() => {
-        // Fallback: no captions
+        const imgs = await buildImages(data);
+        setImages(shuffleArray(imgs));
+      } catch {
         const fallback: Metadata = {};
         setMetadata(fallback);
-        setImages(shuffleArray(buildImages(fallback)));
-      });
+        const imgs = await buildImages(fallback);
+        setImages(shuffleArray(imgs));
+      }
+    }
+    load();
   }, []);
 
   const handleShuffle = useCallback(() => {
     setIsShuffling(true);
     setTimeout(() => {
       shuffleKeyRef.current += 1;
-      setImages(shuffleArray(buildImages(metadata)));
+      setImages(prev => shuffleArray([...prev]));
       setIsShuffling(false);
     }, 350);
-  }, [metadata]);
+  }, []);
 
   // Close lightbox on Escape
   useEffect(() => {
@@ -85,12 +114,16 @@ export default function GalleryPage() {
     return () => window.removeEventListener("keydown", handleKey);
   }, []);
 
-  // Filter images by search query
+  // Filter images by search query and orientation
   const filtered = useMemo(() => {
-    if (!search.trim()) return images;
+    let result = images;
+    if (orientationFilter !== 'all') {
+      result = result.filter((img) => img.orientation === orientationFilter);
+    }
+    if (!search.trim()) return result;
     const q = search.toLowerCase();
-    return images.filter((img) => img.caption.toLowerCase().includes(q));
-  }, [images, search]);
+    return result.filter((img) => img.caption.toLowerCase().includes(q));
+  }, [images, search, orientationFilter]);
 
   // Find the lightbox image caption
   const lightboxImage = images.find((img) => img.id === lightbox);
@@ -119,6 +152,21 @@ export default function GalleryPage() {
             onChange={(e) => setSearch(e.target.value)}
             id="gallery-search"
           />
+        </div>
+
+        <div className={styles.filterWrap}>
+          <button
+            className={`${styles.filterBtn} ${orientationFilter === 'all' ? styles.active : ''}`}
+            onClick={() => setOrientationFilter('all')}
+          >All</button>
+          <button
+            className={`${styles.filterBtn} ${orientationFilter === 'horizontal' ? styles.active : ''}`}
+            onClick={() => setOrientationFilter('horizontal')}
+          >Horizontal</button>
+          <button
+            className={`${styles.filterBtn} ${orientationFilter === 'vertical' ? styles.active : ''}`}
+            onClick={() => setOrientationFilter('vertical')}
+          >Vertical</button>
         </div>
 
         <button

@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { ArrowLeft, Clock, ChefHat, Printer, Pencil, Trash2, ImageIcon } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowLeft, Clock, ChefHat, Printer, Pencil, Trash2, ImageIcon, X } from 'lucide-react';
 import { useRecipe } from '@hooks/useRecipes';
 import { useServingsScale } from '@hooks/useServingsScale';
 import { StageTimeline } from './components/StageTimeline/StageTimeline';
@@ -128,6 +129,50 @@ const s = {
     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
     cursor: 'pointer',
   } as React.CSSProperties,
+  lightbox: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.85)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 1000,
+    padding: '24px',
+    cursor: 'pointer',
+    backdropFilter: 'blur(5px)',
+  } as React.CSSProperties,
+  lightboxContent: {
+    position: 'relative',
+    maxWidth: '100%',
+    maxHeight: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    cursor: 'default',
+  } as React.CSSProperties,
+  lightboxImg: {
+    maxWidth: '100%',
+    maxHeight: '85vh',
+    objectFit: 'contain',
+    borderRadius: '12px',
+    boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
+  } as React.CSSProperties,
+  lightboxClose: {
+    position: 'absolute',
+    top: '-40px',
+    right: 0,
+    background: 'none',
+    border: 'none',
+    color: 'white',
+    cursor: 'pointer',
+    padding: '8px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  } as React.CSSProperties,
 } as const;
 
 export default function RecipeDetailPage() {
@@ -138,6 +183,7 @@ export default function RecipeDetailPage() {
   );
   const loadRecipe = useBuilderStore((s) => s.loadRecipe);
   const navigate = useNavigate();
+  const [lightboxImgId, setLightboxImgId] = useState<number | null>(null);
 
   const handleEdit = () => {
     if (!recipe) return;
@@ -242,6 +288,7 @@ export default function RecipeDetailPage() {
                   (e.currentTarget as HTMLImageElement).style.transform = '';
                   (e.currentTarget as HTMLImageElement).style.boxShadow = 'var(--shadow-card)';
                 }}
+                onClick={() => setLightboxImgId(imgId)}
               />
             ))}
           </div>
@@ -287,6 +334,42 @@ export default function RecipeDetailPage() {
 
       {/* Print-only view */}
       <PrintView recipe={recipe} scaleIngredient={scaleIngredient} />
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {lightboxImgId !== null && (
+          <motion.div
+            style={s.lightbox}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            onClick={() => setLightboxImgId(null)}
+          >
+            <motion.div
+              style={s.lightboxContent}
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3, ease: [0.34, 1.56, 0.64, 1] }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                style={s.lightboxClose}
+                onClick={() => setLightboxImgId(null)}
+                aria-label="Close lightbox"
+              >
+                <X size={24} />
+              </button>
+              <img
+                src={`${GALLERY_BASE}/${lightboxImgId}.jpg`}
+                alt={`Recipe photo ${lightboxImgId}`}
+                style={s.lightboxImg}
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 }

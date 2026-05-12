@@ -77,6 +77,35 @@
 }
 
 /* Controls */
+.filterWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filterBtn {
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-family: var(--font-ui);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid rgba(44, 24, 16, 0.12);
+  background: var(--color-cream);
+  color: var(--color-ink-muted);
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.filterBtn:hover {
+  background: rgba(44, 24, 16, 0.04);
+  border-color: rgba(44, 24, 16, 0.2);
+}
+
+.filterBtn.active {
+  background: var(--color-ink);
+  color: white;
+  border-color: var(--color-ink);
+}
 .controls {
   display: flex;
   align-items: center;
