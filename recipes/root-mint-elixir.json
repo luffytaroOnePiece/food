@@ -1,7 +1,7 @@
 {
-  "id": "abc-detox-juice",
+  "id": "root-mint-elixir",
   "meta": {
-    "name": "ABC Detox Juice",
+    "name": "Root & Mint Elixir",
     "description": "A simple, nutrient-dense juice made with fresh vegetables and fruits. It’s slightly earthy from beetroot, fresh from mint, and naturally sweetened with dates. no added sugar needed. Good for a quick morning boost.",
     "cuisine": "Urban Life",
     "servings": 2,
@@ -16,7 +16,7 @@
     ],
     "icon": "🥤",
     "createdAt": "2026-05-05T02:42:31.490Z",
-    "updatedAt": "2026-05-05T04:33:46.087Z",
+    "updatedAt": "2026-05-12T05:01:38.601Z",
     "galleryImages": [
       6,
       5,
