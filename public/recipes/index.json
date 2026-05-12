@@ -1,22 +1,6 @@
 {
   "recipes": [
     {
-      "id": "abc-detox-juice",
-      "filename": "abc-detox-juice.json",
-      "name": "ABC Detox Juice",
-      "cuisine": "Urban Life",
-      "tags": [
-        "juice",
-        "detox",
-        "summer",
-        "boost",
-        "immune"
-      ],
-      "icon": "🥤",
-      "prepTime": 10,
-      "cookTime": 5
-    },
-    {
       "id": "andhra-style-chicken-biriyani",
       "filename": "andhra-style-chicken-biriyani.json",
       "name": "Andhra Style Chicken Biriyani",
@@ -61,6 +45,37 @@
       "icon": "🍲",
       "prepTime": 10,
       "cookTime": 30
+    },
+    {
+      "id": "musk-melon-fresh-juice",
+      "filename": "musk-melon-fresh-juice.json",
+      "name": "Musk Melon Fresh Juice",
+      "cuisine": "Earth",
+      "tags": [
+        "juice",
+        "fruit",
+        "musk melon",
+        "chill"
+      ],
+      "icon": "🍈",
+      "prepTime": 10,
+      "cookTime": 5
+    },
+    {
+      "id": "root-mint-elixir",
+      "filename": "root-mint-elixir.json",
+      "name": "Root & Mint Elixir",
+      "cuisine": "Urban Life",
+      "tags": [
+        "juice",
+        "detox",
+        "summer",
+        "boost",
+        "immune"
+      ],
+      "icon": "🥤",
+      "prepTime": 10,
+      "cookTime": 5
     },
     {
       "id": "schezwan-chicken-fried-rice",

@@ -133,6 +133,14 @@
       "emoji": "🥜"
     },
     {
+      "name": "Honey",
+      "emoji": "🍯"
+    },
+    {
+      "name": "Ice cubes",
+      "emoji": "🧊"
+    },
+    {
       "name": "Inguva",
       "emoji": "🧂"
     },
@@ -155,6 +163,10 @@
     {
       "name": "Moong Dal",
       "emoji": "🥣"
+    },
+    {
+      "name": "Muskmelon",
+      "emoji": "🍈"
     },
     {
       "name": "Oil",
@@ -211,6 +223,10 @@
     {
       "name": "Vinegar",
       "emoji": "🍶"
+    },
+    {
+      "name": "Water",
+      "emoji": "💧"
     }
   ]
 }

@@ -1,0 +1,96 @@
+{
+  "id": "musk-melon-fresh-juice",
+  "meta": {
+    "name": "Musk Melon Fresh Juice",
+    "description": "A naturally sweet and ultra-refreshing cooler made from juicy ripe muskmelon, blended to a smooth, hydrating finish.\nLight on the stomach, rich in freshness, and packed with a mellow fruity flavor that instantly cools and energizes every sip. Perfect for hot days, post-meal refreshment, or a clean fruity recharge.",
+    "cuisine": "Earth",
+    "servings": 1,
+    "prepTime": 10,
+    "cookTime": 5,
+    "tags": [
+      "juice",
+      "fruit",
+      "musk melon",
+      "chill"
+    ],
+    "icon": "🍈",
+    "createdAt": "2026-05-12T05:09:11.514Z",
+    "updatedAt": "2026-05-12T05:11:37.334Z",
+    "galleryImages": [
+      18,
+      19
+    ]
+  },
+  "stages": [
+    {
+      "id": "stage-1778562141316-gypli",
+      "name": "Prep",
+      "cards": [
+        {
+          "id": "card-1778562218800-1",
+          "type": "ingredient",
+          "name": "Muskmelon",
+          "quantity": 1,
+          "unit": "piece",
+          "emoji": "🍈"
+        },
+        {
+          "id": "card-1778562250300-2",
+          "type": "ingredient",
+          "name": "Honey",
+          "quantity": 2,
+          "unit": "tbsp",
+          "emoji": "🍯"
+        },
+        {
+          "id": "card-1778562294550-3",
+          "type": "ingredient",
+          "name": "Ice cubes",
+          "quantity": 3,
+          "unit": "bunch",
+          "emoji": "🧊"
+        },
+        {
+          "id": "card-1778562331399-4",
+          "type": "ingredient",
+          "name": "Water",
+          "quantity": 200,
+          "unit": "ml",
+          "emoji": "💧"
+        }
+      ]
+    },
+    {
+      "id": "stage-1778562369400-w6odr",
+      "name": "Prep the Fruit",
+      "cards": [
+        {
+          "id": "card-1778562380616-5",
+          "type": "step",
+          "text": "🍈 First, slice the Muskmelon in half and remove the seeds before cutting the flesh into small chunks."
+        },
+        {
+          "id": "card-1778562392283-6",
+          "type": "step",
+          "text": "🍯 Place the melon pieces into a blender and add 2 tablespoons of Honey/Sugar to provide a natural sweetness."
+        },
+        {
+          "id": "card-1778562411699-7",
+          "type": "step",
+          "text": "💧 Pour in 200 ml of Water and blend the mixture on high speed until the texture is perfectly smooth."
+        }
+      ]
+    },
+    {
+      "id": "stage-1778562419633-skx8x",
+      "name": "Serve",
+      "cards": [
+        {
+          "id": "card-1778562425466-8",
+          "type": "step",
+          "text": "🧊 Divide the juice into two glasses and add 3 bunches of Ice cubes to ensure the drink is refreshing and cold."
+        }
+      ]
+    }
+  ]
+}
