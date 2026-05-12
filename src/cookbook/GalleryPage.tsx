@@ -65,7 +65,6 @@ function shuffleArray<T>(arr: T[]): T[] {
 }
 
 export default function GalleryPage() {
-  const [metadata, setMetadata] = useState<Metadata>({});
   const [images, setImages] = useState<GalleryImage[]>([]);
   const [search, setSearch] = useState("");
   const [orientationFilter, setOrientationFilter] = useState<'all' | 'vertical' | 'horizontal'>('all');
@@ -83,12 +82,10 @@ export default function GalleryPage() {
       try {
         const r = await fetch(`${import.meta.env.BASE_URL}foodmetadata.json`);
         const data = await r.json();
-        setMetadata(data);
         const imgs = await buildImages(data);
         setImages(shuffleArray(imgs));
       } catch {
         const fallback: Metadata = {};
-        setMetadata(fallback);
         const imgs = await buildImages(fallback);
         setImages(shuffleArray(imgs));
       }
