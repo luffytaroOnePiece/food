@@ -11,7 +11,7 @@
         "andhra",
         "chicken"
       ],
-      "icon": "🍽️",
+      "icon": "🍗",
       "prepTime": 20,
       "cookTime": 60
     },
@@ -45,6 +45,20 @@
       "icon": "🍲",
       "prepTime": 10,
       "cookTime": 30
+    },
+    {
+      "id": "majjiga-pulusu",
+      "filename": "majjiga-pulusu.json",
+      "name": "Majjiga Pulusu",
+      "cuisine": "Andhra",
+      "tags": [
+        "curd",
+        "andha",
+        "majjigacharu"
+      ],
+      "icon": "🥣",
+      "prepTime": 10,
+      "cookTime": 15
     },
     {
       "id": "musk-melon-fresh-juice",
@@ -88,7 +102,7 @@
         "chicken",
         "schezwan"
       ],
-      "icon": "🍽️",
+      "icon": "🍛",
       "prepTime": 15,
       "cookTime": 60
     },
@@ -119,7 +133,7 @@
         "andhra",
         "pappu"
       ],
-      "icon": "🍽️",
+      "icon": "🍅",
       "prepTime": 10,
       "cookTime": 45
     }

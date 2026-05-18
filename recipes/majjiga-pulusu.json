@@ -1,0 +1,205 @@
+{
+  "id": "majjiga-pulusu",
+  "meta": {
+    "name": "Majjiga Pulusu",
+    "description": "A soothing Andhra-style Majjiga Charu made with freshly whisked buttermilk, crushed ginger, green chilli, and aromatic tempering for a light yet deeply comforting flavor. Gently heated with onions, garlic, curry leaves, and spices, this warm homestyle classic pairs beautifully with hot rice for a simple soulful meal.\n",
+    "cuisine": "Andhra",
+    "servings": 1,
+    "prepTime": 10,
+    "cookTime": 15,
+    "tags": [
+      "curd",
+      "andha",
+      "majjigacharu"
+    ],
+    "icon": "🥣",
+    "createdAt": "2026-05-18T08:03:44.362Z",
+    "updatedAt": "2026-05-18T08:06:07.011Z",
+    "galleryImages": [
+      24,
+      25
+    ]
+  },
+  "stages": [
+    {
+      "id": "stage-1779090435063-gdi4e",
+      "name": "Prep",
+      "cards": [
+        {
+          "id": "card-1779090599495-1",
+          "type": "ingredient",
+          "name": "curd",
+          "quantity": 0.5,
+          "unit": "cup",
+          "emoji": "🥣"
+        },
+        {
+          "id": "card-1779090643394-2",
+          "type": "ingredient",
+          "name": "Water",
+          "quantity": 100,
+          "unit": "ml",
+          "emoji": "💧"
+        },
+        {
+          "id": "card-1779090659595-3",
+          "type": "ingredient",
+          "name": "Ginger",
+          "quantity": 0.5,
+          "unit": "piece",
+          "emoji": "🫚"
+        },
+        {
+          "id": "card-1779090677961-4",
+          "type": "ingredient",
+          "name": "Green Chilli",
+          "quantity": 1,
+          "unit": "piece",
+          "emoji": "🍽️"
+        },
+        {
+          "id": "card-1779090690811-5",
+          "type": "ingredient",
+          "name": "Onion",
+          "quantity": 0.5,
+          "unit": "piece",
+          "emoji": "🧅"
+        },
+        {
+          "id": "card-1779090711561-6",
+          "type": "ingredient",
+          "name": "Tempering spices",
+          "quantity": 0,
+          "unit": "g",
+          "emoji": "🍽️"
+        },
+        {
+          "id": "card-1779090733678-7",
+          "type": "ingredient",
+          "name": "Curry Leaves",
+          "quantity": 5,
+          "unit": "bunch",
+          "emoji": "🌿"
+        },
+        {
+          "id": "card-1779090751995-8",
+          "type": "ingredient",
+          "name": "Coriander",
+          "quantity": 5,
+          "unit": "bunch",
+          "emoji": "🍃"
+        },
+        {
+          "id": "card-1779090772644-9",
+          "type": "ingredient",
+          "name": "Turmeric Powder",
+          "quantity": 0.5,
+          "unit": "tsp",
+          "emoji": "✨"
+        },
+        {
+          "id": "card-1779090787177-10",
+          "type": "ingredient",
+          "name": "Salt",
+          "quantity": 0,
+          "unit": "g",
+          "emoji": "🧂",
+          "notes": "Based on your taste buds"
+        },
+        {
+          "id": "card-1779091175959-20",
+          "type": "ingredient",
+          "name": "Oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "emoji": "🥄"
+        }
+      ]
+    },
+    {
+      "id": "stage-1779090832178-v6xqm",
+      "name": "Prepare the Curd Base",
+      "cards": [
+        {
+          "id": "card-1779090921492-11",
+          "type": "step",
+          "text": "In your bowl, add half cup of curd and add the salt right now. Whisk (chilk) them together thoroughly until smooth. Slowly blend with 100ml cup of water to create your seasoned curd base."
+        }
+      ]
+    },
+    {
+      "id": "stage-1779090977993-g99jb",
+      "name": "Fry the Spices and Aromatics",
+      "cards": [
+        {
+          "id": "card-1779091005110-13",
+          "type": "step",
+          "text": "Heat 1 teaspoon of oil in a small pan or ladle. Add the mustard seeds, cumin seeds, chana dal, urad dal, and dry red chilli. Let them splutter."
+        }
+      ]
+    },
+    {
+      "id": "stage-1779091024059-3ej1s",
+      "name": "Sauté the Crushed Ginger & Chilli",
+      "cards": [
+        {
+          "id": "card-1779091038376-15",
+          "type": "step",
+          "text": "Add the crushed ginger and green chilli directly into the hot oil. Sauté for a few seconds until the raw aroma disappears and infuses into the oil."
+        }
+      ]
+    },
+    {
+      "id": "stage-1779091054659-943u7",
+      "name": "Toss the Onions",
+      "cards": [
+        {
+          "id": "card-1779091071859-17",
+          "type": "step",
+          "text": "Add the sliced onions and curry leaves to the pan. Sauté for about 30 seconds so the onions soften slightly but keep their crunch. Stir in the turmeric powder"
+        }
+      ]
+    },
+    {
+      "id": "stage-1779091129175-be458",
+      "name": "Pour and Heat",
+      "cards": [
+        {
+          "id": "card-1779091133542-18",
+          "type": "step",
+          "text": "Pour the prepared salted curd base directly into the pan with the hot tempering. Turn the stove to low heat and cook for exactly 3 minutes, stirring constantly so the curd warms through evenly and doesn't split.",
+          "timerMinutes": 3
+        }
+      ]
+    },
+    {
+      "id": "stage-1779091158674-f4whi",
+      "name": "Garnish & Serve",
+      "cards": [
+        {
+          "id": "card-1779091168358-19",
+          "type": "step",
+          "text": "Turn off the stove, mix in the fresh coriander leaves, and serve your warm, perfectly spiced Majjiga Charu over hot rice."
+        }
+      ]
+    },
+    {
+      "id": "stage-1779091524028-we5zr",
+      "name": "References",
+      "cards": [
+        {
+          "id": "card-1779091541145-1",
+          "type": "video",
+          "url": "https://youtu.be/1YvwiXKKhY4?si=oPYcqNqs8aCEcDqU",
+          "title": "Majjiga Charu"
+        },
+        {
+          "id": "card-1779091557828-2",
+          "type": "video",
+          "url": "https://youtu.be/EhzNoANWAt4?si=VPv44VbVEZxBFgES",
+          "title": "Majjiga Charu"
+        }
+      ]
+    }
+  ]
+}
